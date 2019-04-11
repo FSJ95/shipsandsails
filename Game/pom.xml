@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dk.kea</groupId>
-    <artifactId>shipgame</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>shipgame</name>
-    <description>Ship Game</description>
+    <artifactId>shipsandsails</artifactId>
+    <version>0.0.1</version>
+    <name>shipsandsails</name>
+    <description>Modulopgave 3 - Ships and Sails</description>
 
     <properties>
         <java.version>1.8</java.version>
