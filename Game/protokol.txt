@@ -1,0 +1,12 @@
+Protokol for kommunikation mellem servere
+Ren text strøm
+
+Først sendes vejr (W:)
+Dernæst sendes alle skibe (S:)
+Til sidst sendes alle ordrer (O:) -- (skal de med over?)
+
+Format:
+W:windDirection:windSpeed:
+S:liste af skibsattributer adskilt med ::
+O:liste af ordreattributer adskilt med :
+END
