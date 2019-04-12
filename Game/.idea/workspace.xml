@@ -56,6 +56,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/tile.png">
           <provider selected="true" editor-type-id="images" />
@@ -64,6 +65,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/tile.svg">
           <provider selected="true" editor-type-id="images" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+>>>>>>> a88ad667a0fc50babc5a31d11cb7e269aca0a226
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -340,8 +359,12 @@
       <workItem from="1554807187478" duration="105000" />
       <workItem from="1554982765830" duration="2968000" />
       <workItem from="1554989060936" duration="32000" />
+<<<<<<< HEAD
       <workItem from="1554995360217" duration="10551000" />
       <workItem from="1555007538853" duration="27928000" />
+=======
+      <workItem from="1554995360217" duration="11170000" />
+>>>>>>> a88ad667a0fc50babc5a31d11cb7e269aca0a226
     </task>
     <servers />
   </component>
@@ -354,7 +377,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="45139000" />
+=======
+    <option name="totallyTimeSpent" value="17830000" />
+>>>>>>> a88ad667a0fc50babc5a31d11cb7e269aca0a226
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -518,6 +545,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -558,6 +586,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+>>>>>>> a88ad667a0fc50babc5a31d11cb7e269aca0a226
         </state>
       </provider>
     </entry>
