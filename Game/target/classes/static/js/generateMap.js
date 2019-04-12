@@ -11,6 +11,12 @@ tiles = []
 /* Methods */
 window.onload = function() {
 
+    generateMap();
+
+}
+
+function generateMap() {
+
     // Where to place the titles
     let map = document.getElementById('tiles');
 
@@ -20,7 +26,7 @@ window.onload = function() {
 
     // The size of the map.
     // Change size to get a bigger/smaller map.
-    const mapSize = 20;
+    const mapSize = 15;
     const width = mapSize/2;
     const height = mapSize;
 

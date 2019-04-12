@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "pirate";
+    src: url("/font/SPINSTEE.TTF");
+}
+
+@font-face {
+    font-family: "pirate1";
+    src: url("/font/BlackPearl.ttf");
+}
+
+
 html, body {
     height: 100%;
     background-color: #000000;
@@ -9,28 +20,25 @@ html, body {
 #map {
     width: 100%;
     height: 100%;
-    background-image: url("/img/water_background.jpg") ;
+    background-image: url("/img/water_background.png") ;
     background-repeat: repeat;
     background-position: center;
-    opacity: 0.3;
 }
 .game {
     background-color: #1153a0;
 }
 
 .settings {
-    background-image: url("/img/wood_background.jpg");
+    background-image: url("/img/wood_background.png");
     background-repeat: repeat;
     background-position: top;
-    opacity: 0.5;
     background-color: black;
 }
 
 .stats {
-    background-image: url("/img/wood_background.jpg");
+    background-image: url("/img/wood_background.png");
     background-repeat: repeat;
     background-position: bottom;
-    opacity: 0.5;
     background-color: black;
 }
 
@@ -47,11 +55,22 @@ html, body {
 }
 
 .tile {
-    background: url('../img/tile.png');
+    background: url('../img/tile50v2.png');
     position: absolute;
 }
 
 #tiles {
     height: 100%;
     width: 100%;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: pirate1, sans-serif;
+}
+
+button {
+
 }
