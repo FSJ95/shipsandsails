@@ -6,16 +6,30 @@ class Tile {
     }
 }
 
-tiles = []
+let tiles = [];
 
-/* Methods */
 window.onload = function() {
 
-    generateMap();
+    generateMap(10);
 
-}
+};
 
-function generateMap() {
+function generateMap(mSize) {
+
+    console.log(tiles);
+    if(!isEmpty(tiles)) {
+
+        tiles = [];
+
+        let elements = document.getElementsByClassName('tile');
+        for (var i = elements.length; i--;) {
+            elements[i].parentNode.removeChild(elements[i]);
+        }
+
+
+    }
+
+    console.log(document.getElementsByClassName('tile').length);
 
     // Where to place the titles
     let map = document.getElementById('tiles');
@@ -26,16 +40,16 @@ function generateMap() {
 
     // The size of the map.
     // Change size to get a bigger/smaller map.
-    const mapSize = 15;
-    const width = mapSize/2;
-    const height = mapSize;
+    let mapSize = mSize;
+    const width = mapSize; // Divide by 2 to get a X by X map. Without its X by X*2.
+    const height = mapSize;;
 
     // Checks how big the tiles should be to fit the game container.
     // Depending whether game height or with is lower.
     const tileSizeFromWidth = (mapWidth/(width*2));
     const tileSizeFromHeight = (mapHeight/(height + 1)); // Adds 2 to create extra space
 
-    var tileSize;
+    let tileSize;
 
     if (tileSizeFromHeight < tileSizeFromWidth) {
         tileSize = Math.round(tileSizeFromHeight);
@@ -44,8 +58,8 @@ function generateMap() {
     }
 
     // Center the map in the game container
-    const tilesCenterWidth = (mapWidth-(width*((tileSize-tileSize*0.03) + tileSize*0.5)))/2;
-    const tilesCenterHeight = (mapHeight-((height+0.5)*(tileSize-tileSize*0.05)));
+    const tilesCenterWidth =  (mapWidth  - (tileSize * 1.5) * width  + (tileSize  ))/2;
+    const tilesCenterHeight = (mapHeight - (tileSize      ) * height + (tileSize*2))/2;
 
     // Add the first set of tiles (First column and every second after that).
     for (var i = 0; i < width; i++) {
@@ -95,6 +109,14 @@ function generateMap() {
 
         }
 
+    }
+
+    function isEmpty(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;
+        }
+        return true;
     }
 
 }
