@@ -55,7 +55,12 @@ html, body {
 }
 
 .tile {
-    background: url('../img/tile50v2.png');
+    background: url('../img/tile.png');
+    position: absolute;
+}
+
+.outofboundstile {
+    background: url('../img/outofboundstile.png');
     position: absolute;
 }
 
