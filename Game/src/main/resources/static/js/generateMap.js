@@ -1,53 +1,31 @@
 class Tile {
     constructor(el, x, y) {
         this.el = el;
-        this.x = x; // These are coordinates, not pixel positions.
-        this.y = y;
+        this.x = x; // Coordinates.
+        this.y = y; // Coordinates.
     }
 }
 
 let tiles = [];
 
-window.onload = function() {
-
-    generateMap(10);
-
-};
-
-function generateMap(mSize) {
-
-    console.log(tiles);
-    if(!isEmpty(tiles)) {
-
-        tiles = [];
-
-        let elements = document.getElementsByClassName('tile');
-        for (var i = elements.length; i--;) {
-            elements[i].parentNode.removeChild(elements[i]);
-        }
-
-
-    }
-
-    console.log(document.getElementsByClassName('tile').length);
+function generateMap(height, width) {
 
     // Where to place the titles
     let map = document.getElementById('tiles');
 
     // Get the size of the map.
-    let mapHeight = document.getElementById('gameView').clientHeight;
-    let mapWidth = document.getElementById('gameView').clientWidth;
+    let mapHeightPixels = document.getElementById('gameView').clientHeight;
+    let mapWidthPixels = document.getElementById('gameView').clientWidth;
 
     // The size of the map.
     // Change size to get a bigger/smaller map.
-    let mapSize = mSize;
-    const width = mapSize; // Divide by 2 to get a X by X map. Without its X by X*2.
-    const height = mapSize;;
+    const mapWidthCount = width/2; // Divide by 2 to get a X by X map. Without its X by X*2.
+    const mapHeightCount = height;
 
     // Checks how big the tiles should be to fit the game container.
-    // Depending whether game height or with is lower.
-    const tileSizeFromWidth = (mapWidth/(width*2));
-    const tileSizeFromHeight = (mapHeight/(height + 1)); // Adds 2 to create extra space
+    // Depending whether game mapHeightCount or with is lower.
+    const tileSizeFromWidth = (mapWidthPixels/(mapWidthCount*2));
+    const tileSizeFromHeight = (mapHeightPixels/(mapHeightCount + 1)); // Adds 2 to create extra space
 
     let tileSize;
 
@@ -58,12 +36,12 @@ function generateMap(mSize) {
     }
 
     // Center the map in the game container
-    const tilesCenterWidth =  (mapWidth  - (tileSize * 1.5) * width  + (tileSize  ))/2;
-    const tilesCenterHeight = (mapHeight - (tileSize      ) * height + (tileSize*2))/2;
+    const tilesCenterWidth =  (mapWidthPixels  - (tileSize * 1.5) * mapWidthCount  + (tileSize  ))/2;
+    const tilesCenterHeight = (mapHeightPixels - (tileSize      ) * mapHeightCount + (tileSize*2))/2;
 
     // Add the first set of tiles (First column and every second after that).
-    for (var i = 0; i < width; i++) {
-        for (var j = 0; j < height; j++) {
+    for (var i = 0; i < mapWidthCount; i++) {
+        for (var j = 0; j < mapHeightCount; j++) {
 
             // Creates a new div element.
             let div = document.createElement('div');
@@ -86,9 +64,9 @@ function generateMap(mSize) {
     }
 
     // Add the second set of tiles (Second column and every second after that).
-    for (var i = 0; i < width; i++) {
+    for (var i = 0; i < mapWidthCount; i++) {
 
-        for (var j = 0; j < height; j++) {
+        for (var j = 0; j < mapHeightCount; j++) {
 
             // Creates a new div element.
             let div = document.createElement('div');
@@ -108,15 +86,5 @@ function generateMap(mSize) {
             map.append(div);
 
         }
-
     }
-
-    function isEmpty(obj) {
-        for(var key in obj) {
-            if(obj.hasOwnProperty(key))
-                return false;
-        }
-        return true;
-    }
-
 }

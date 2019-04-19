@@ -1,15 +1,30 @@
 package dk.kea.shipgame.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
 public class Weather {
+
+    private int weatherID;
     private Direction windDirection; //ENUM N, NE, SE, S, SW, NW
     private int windSpeed; //0 - 5
 
     public Weather() {
     }
 
-    public Weather(Direction windDirection, int windSpeed) {
+    public Weather(int weatherID, Direction windDirection, int windSpeed) {
+        this.weatherID = weatherID;
         this.windDirection = windDirection;
         this.windSpeed = windSpeed;
+    }
+
+    public int getWeatherID() {
+        return weatherID;
+    }
+
+    public void setWeatherID(int weatherID) {
+        this.weatherID = weatherID;
     }
 
     public Direction getWindDirection() {

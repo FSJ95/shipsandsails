@@ -15,6 +15,76 @@
 </head>
 <body>
 
+<!-- CREATE SERVER MODEL START -->
+<div class="modal fade" id="createServerModal" tabindex="-1" role="dialog" aria-labelledby="createServerModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createServerModalTitle">CREATE SERVER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form action="/server" method="post" id="createServerForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="map-height" class="col-form-label">Height of map:</label>
+                            <input type="text" name="height" class="form-control" id="map-height" placeholder="Height">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="map-width" class="col-form-label">Width of map:</label>
+                            <input type="text" name="width" class="form-control" id="map-width" placeholder="Width">
+                        </div>
+                    </div>
+                    <label for="player-nationality"class="col-form-label">Your nationality:</label>
+                    <select class="form-control" id="player-nationality" name="player_nationality">
+                        <th:block th:each="nationality : ${nationalities}">
+                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                        </th:block>
+                    </select>
+                    <label for="enemy-nationality" class="col-form-label">Enemy nationality:</label>
+                    <select class="form-control" id="enemy-nationality" name="enemy_nationality">
+                        <th:block th:each="nationality : ${nationalities}">
+                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                        </th:block>
+                    </select>
+            </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" form="createServerForm" class="btn btn-secondary" data-dismiss="modal" value="Reset">Close</button>
+                <button type="submit" form="createServerForm" class="btn btn-primary" >Create</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- CREATE SERVER MODEL END -->
+
+<!-- CONNECT TO SERVER MODEL START -->
+<div class="modal fade" id="connectToServerModal" tabindex="-1" role="dialog" aria-labelledby="connectToServerModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="connectToServerModalTitle">CONNECT TO SERVER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Connect</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONNECT TO SERVER MODEL END -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="vh-100 col-9 no-gutters">
@@ -46,9 +116,19 @@
                         <div class="settings view">
                             <h1>SHIPS & SAILS</h1>
                             <div class="btn-group-vertical" id="settingButtonGroup">
-                                <button type="button" class="btn btn-dark" id="settingButton" onclick="Connect()">Connect</button>
-                                <button type="button" class="btn btn-dark" id="settingButton" onclick="Mute()">Mute Sound</button>
-                                <button type="button" class="btn btn-dark" id="settingButton" onclick="size()">Change map size</button>
+
+                                <th:block th:switch="${state}">
+                                    <button type="button" class="btn btn-dark" id="settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="server" disabled>CONNECT TO SERVER</button>
+                                    <button type="button" class="btn btn-dark" id="settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="index">CONNECT TO SERVER</button>
+                                </th:block>
+
+                                <th:block th:switch="${state}">
+                                    <button type="button" class="btn btn-dark" id="settingButton" data-toggle="modal" data-target="#createServerModal" th:case="server" disabled>CREATE SERVER</button>
+                                    <button type="button" class="btn btn-dark" id="settingButton" data-toggle="modal" data-target="#createServerModal" th:case="index">CREATE SERVER</button>
+                                </th:block>
+
+                                <button type="button" class="btn btn-dark" id="settingButton">MUTE SOUND</button>
+
                             </div>
 
 
@@ -71,11 +151,16 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script th:src='@{js/bootstrap.min.js}' type="text/javascript"></script>
+<th:block th:switch="${state}">
+    <script th:src='@{js/generateMap.js}' type="text/javascript" th:case="server"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/ generateMap([[${generatedMap.height}]], [[${generatedMap.width}]]); /*]]>*/
+    </script>
+</th:block>
 
-
-<script th:src='@{js/bootstrap.bundle.js}' type="text/javascript"></script>
-<script th:src='@{js/generateMap.js}' type="text/javascript"></script>
-<script th:src='@{js/settings.js}' type="text/javascript"></script>
 
 </body>
 </html>
