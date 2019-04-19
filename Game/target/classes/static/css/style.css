@@ -83,6 +83,6 @@ h1 {
     width: 70%;
 }
 
-#settingButton {
+.settingButton {
     margin-bottom: 3vh;
 }

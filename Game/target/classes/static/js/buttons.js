@@ -1,4 +1,12 @@
-function size() {
-    let mSize = prompt("What map size do you want:", "10");
-    generateMap(parseInt(mSize));
+const backgroundmusic = new Audio('music/potc.mp3');
+
+
+function music_toggle() {
+    if (backgroundmusic.paused) {
+        document.getElementById("musicButton").innerHTML= "MUTE MUSIC";
+        backgroundmusic.play();
+    } else {
+        document.getElementById("musicButton").innerHTML= "UNMUTE MUSIC";
+        backgroundmusic.pause();
+    }
 }
