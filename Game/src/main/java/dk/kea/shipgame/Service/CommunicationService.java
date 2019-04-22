@@ -38,4 +38,8 @@ public class CommunicationService {
     public void initHost(){
         communicationRepo.initHost();
     }
+
+    public void sendMsg(){
+        communicationRepo.sendMsg();
+    }
 }

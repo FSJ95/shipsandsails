@@ -62,11 +62,17 @@ public class mainController {
     @RequestMapping(value="/client", method=RequestMethod.POST)
     public String createClient(@ModelAttribute("ipadress") String ipadress,Model model){
 
-        System.out.println(ipadress);
         communicationService.initComm(ipadress);
 
         return "redirect:/client";
     }
+
+    @GetMapping("/sendmsg")
+    public String sendMsg(){
+        communicationService.sendMsg();
+        return "index";
+    }
+
 
     @GetMapping("/client")
     public String server(Model model){
