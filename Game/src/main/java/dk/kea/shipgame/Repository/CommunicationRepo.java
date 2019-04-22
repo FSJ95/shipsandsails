@@ -28,4 +28,13 @@ public class CommunicationRepo {
     {
 
     }
+
+    public boolean initHost(){
+
+        return false;
+    }
+
+    public boolean connectToServer(String ip){
+        return false;
+    }
 }
