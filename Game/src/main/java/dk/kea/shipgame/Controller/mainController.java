@@ -52,9 +52,10 @@ public class mainController {
     public String createServer(@ModelAttribute Map map, Model model){
 
         communicationService.initHost();
-        Map generatedMap = map;
+        communicationService.sendMsg((Object) map);
+
         System.out.println(map.getMapID());
-        model.addAttribute("generatedMap", generatedMap);
+        model.addAttribute("generatedMap", map);
 
         return "redirect:/server";
     }
@@ -64,25 +65,26 @@ public class mainController {
 
         communicationService.initComm(ipadress);
 
+        model.addAttribute("generatedMap", (Map) communicationService.recieveMsg());
+
         return "redirect:/client";
     }
 
-    @GetMapping("/sendmsg")
-    public String sendMsg(){
-        communicationService.sendMsg();
-        return "index";
-    }
 
-    @GetMapping("/recievemsg")
-    public String recieveMsg(){
-        communicationService.recieveMsg();
-        return "index";
-    }
 
 
     @GetMapping("/client")
-    public String server(Model model){
+    public String client(@ModelAttribute("generatedMap") Map map, Model model){
 
+        if(map.getMapID() < 0){
+            return "redirect:/client";
+        }
+
+        //List<Ship> ships = mapService.getShips(map);
+
+        model.addAttribute( "state", "server");
+        model.addAttribute("generatedMap", map);
+        //model.addAttribute("ships", ships);
 
         return "index";
     }

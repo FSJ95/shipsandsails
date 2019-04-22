@@ -2,9 +2,10 @@ package dk.kea.shipgame.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
-public class Map {
+public class Map implements Serializable {
 
     @Id
     private int mapID;

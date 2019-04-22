@@ -17,12 +17,12 @@ public class CommunicationRepo {
     private Socket link;
     final int PORT = 1234;
 
-    public void sendMsg(){
+    public void sendMsg(Object object){
         try {
 
             ObjectOutputStream oos = new ObjectOutputStream(this.link.getOutputStream());
 
-            oos.writeBoolean(true);
+            oos.writeObject(object);
             oos.flush();
 
         } catch (IOException e) {
@@ -30,16 +30,18 @@ public class CommunicationRepo {
         }
     }
 
-    public void recieveMsg(){
+    public Object recieveMsg(){
         try {
 
             ObjectInputStream ois = new ObjectInputStream(this.link.getInputStream());
 
-            System.out.println(ois.readBoolean());
+            return ois.readObject();
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException | IOException a) {
+            a.printStackTrace();
         }
+
+        return null;
     }
 
     public boolean initComm(String ip) //returns true if server - use to determine if to send Weather

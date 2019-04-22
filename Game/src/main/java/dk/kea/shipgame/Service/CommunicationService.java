@@ -39,11 +39,11 @@ public class CommunicationService {
         communicationRepo.initHost();
     }
 
-    public void sendMsg(){
-        communicationRepo.sendMsg();
+    public void sendMsg(Object object){
+        communicationRepo.sendMsg(object);
     }
 
-    public void recieveMsg(){
-        communicationRepo.recieveMsg();
+    public Object recieveMsg(){
+        return communicationRepo.recieveMsg();
     }
 }
