@@ -73,6 +73,12 @@ public class mainController {
         return "index";
     }
 
+    @GetMapping("/recievemsg")
+    public String recieveMsg(){
+        communicationService.recieveMsg();
+        return "index";
+    }
+
 
     @GetMapping("/client")
     public String server(Model model){

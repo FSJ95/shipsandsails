@@ -30,6 +30,18 @@ public class CommunicationRepo {
         }
     }
 
+    public void recieveMsg(){
+        try {
+
+            ObjectInputStream ois = new ObjectInputStream(this.link.getInputStream());
+
+            System.out.println(ois.readBoolean());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public boolean initComm(String ip) //returns true if server - use to determine if to send Weather
     {
 

@@ -42,4 +42,8 @@ public class CommunicationService {
     public void sendMsg(){
         communicationRepo.sendMsg();
     }
+
+    public void recieveMsg(){
+        communicationRepo.recieveMsg();
+    }
 }
