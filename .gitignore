@@ -1,3 +1,6 @@
+workspace.xml
+application.properties
+
 # Compiled class file
 *.class
 
