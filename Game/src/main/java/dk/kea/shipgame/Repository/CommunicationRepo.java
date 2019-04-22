@@ -55,12 +55,14 @@ public class CommunicationRepo {
             link = new Socket(host,PORT);
             if(link.isConnected()) {
                 System.out.println("\n* Connected to the server... *\n");
+                return true;
             }
+
 
         } catch (Exception e){
             System.out.println(e);
         }
-        return false;
+    return false;
     }
 
     public void exchangeWeather(Weather weather) //exchange weather - if server then decide weather, if client receive weather

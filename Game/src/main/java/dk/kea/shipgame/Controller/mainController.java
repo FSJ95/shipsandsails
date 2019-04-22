@@ -54,23 +54,24 @@ public class mainController {
 
         if (communicationService.initHost()){
             communicationService.sendMsg((Object) map);
+        } else {
+            return "redirect:/";
         }
 
-
-        System.out.println(map.getMapID());
         model.addAttribute("generatedMap", map);
 
         return "redirect:/server";
     }
 
     @PostMapping("/client")
-    public String createClient(@ModelAttribute("ipadress") String ipadress,Model model){
+    public String createClient(@ModelAttribute("ipadress") String ipadress, Model model){
         Map map = new Map();
 
         if (communicationService.initComm(ipadress)) {
             map = (Map) communicationService.recieveMsg();
+        } else {
+            return "redirect:/";
         }
-
 
         model.addAttribute("generatedMap", map);
 
