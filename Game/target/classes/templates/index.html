@@ -64,21 +64,38 @@
 <!-- CREATE SERVER MODEL END -->
 
 <!-- CONNECT TO SERVER MODEL START -->
-<div class="modal fade" id="connectToServerModal" tabindex="-1" role="dialog" aria-labelledby="connectToServerModalTitle" aria-hidden="true">
+<div class="modal fade" id="connectToServerModal" tabindex="-1" role="dialog" aria-labelledby="connectToClientModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="connectToServerModalTitle">CONNECT TO SERVER</h5>
+                <h5 class="modal-title" id="connectToClientModalTitle">CONNECT TO SERVER</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <form action="/client" method="post" id="createClientForm">
+                    <div class="form-group col-md-12">
+                        <label for="map-height" class="col-form-label">Server IP-Adress:</label>
+                        <input type="text" name="ipadress" class="form-control" id="map-height" placeholder="IP Adress">
+                    </div>
+                    <label for="player-nationality"class="col-form-label">Your nationality:</label>
+                    <select class="form-control" id="player-nationality" name="player_nationality">
+                        <th:block th:each="nationality : ${nationalities}">
+                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                        </th:block>
+                    </select>
+                    <label for="enemy-nationality" class="col-form-label">Enemy nationality:</label>
+                    <select class="form-control" id="enemy-nationality" name="enemy_nationality">
+                        <th:block th:each="nationality : ${nationalities}">
+                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                        </th:block>
+                    </select>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Connect</button>
+                <button type="button" form="createClientForm" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" form="createClientForm" class="btn btn-primary">Connect</button>
             </div>
         </div>
     </div>

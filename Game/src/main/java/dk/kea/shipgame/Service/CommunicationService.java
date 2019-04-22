@@ -34,4 +34,8 @@ public class CommunicationService {
     {
         communicationRepo.exchangeAttackResolved(ships);
     }
+
+    public void initHost(){
+        communicationRepo.initHost();
+    }
 }

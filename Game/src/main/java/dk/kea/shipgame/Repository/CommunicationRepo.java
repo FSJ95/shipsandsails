@@ -1,5 +1,8 @@
 package dk.kea.shipgame.Repository;
 
+import java.io.*;
+import java.net.*;
+import java.util.*;
 import dk.kea.shipgame.Model.Order;
 import dk.kea.shipgame.Model.Ship;
 import dk.kea.shipgame.Model.Weather;
@@ -9,8 +12,21 @@ import java.util.List;
 
 @Repository
 public class CommunicationRepo {
+
+    private ServerSocket servSock;
+    private Socket link;
+    final int PORT = 1234;
+
     public boolean initComm(String ip) //returns true if server - use to determine if to send Weather
     {
+        try {
+            InetAddress host = InetAddress.getByName(ip);
+            int PORT = 1234;
+            link = new Socket(host,PORT);
+            System.out.println("\n* Connected to the server... *\n");
+        } catch (Exception e){
+            System.out.println(e);
+        }
         return false;
     }
 
@@ -30,8 +46,23 @@ public class CommunicationRepo {
     }
 
     public boolean initHost(){
+        try {
 
-        return false;
+            servSock = new ServerSocket(PORT);
+
+            Socket link = null;
+            link = servSock.accept();
+
+            ObjectOutputStream oos = new ObjectOutputStream(link.getOutputStream());
+            ObjectInputStream ois = new ObjectInputStream(link.getInputStream());
+
+            return true;
+
+        } catch (Exception e){
+
+            System.out.println(e);
+            return false;
+        }
     }
 
     public boolean connectToServer(String ip){
