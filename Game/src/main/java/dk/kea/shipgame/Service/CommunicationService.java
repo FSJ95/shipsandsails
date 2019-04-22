@@ -35,8 +35,8 @@ public class CommunicationService {
         communicationRepo.exchangeAttackResolved(ships);
     }
 
-    public void initHost(){
-        communicationRepo.initHost();
+    public boolean initHost(){
+        return communicationRepo.initHost();
     }
 
     public void sendMsg(Object object){

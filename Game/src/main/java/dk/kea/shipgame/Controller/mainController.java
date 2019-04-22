@@ -51,8 +51,11 @@ public class mainController {
     @PostMapping("/server")
     public String createServer(@ModelAttribute Map map, Model model){
 
-        communicationService.initHost();
-        communicationService.sendMsg((Object) map);
+
+        if (communicationService.initHost()){
+            communicationService.sendMsg((Object) map);
+        }
+
 
         System.out.println(map.getMapID());
         model.addAttribute("generatedMap", map);
@@ -60,16 +63,19 @@ public class mainController {
         return "redirect:/server";
     }
 
-    @RequestMapping(value="/client", method=RequestMethod.POST)
+    @PostMapping("/client")
     public String createClient(@ModelAttribute("ipadress") String ipadress,Model model){
+        Map map = new Map();
 
-        communicationService.initComm(ipadress);
+        if (communicationService.initComm(ipadress)) {
+            map = (Map) communicationService.recieveMsg();
+        }
 
-        model.addAttribute("generatedMap", (Map) communicationService.recieveMsg());
+
+        model.addAttribute("generatedMap", map);
 
         return "redirect:/client";
     }
-
 
 
 
@@ -77,7 +83,7 @@ public class mainController {
     public String client(@ModelAttribute("generatedMap") Map map, Model model){
 
         if(map.getMapID() < 0){
-            return "redirect:/client";
+            return "redirect:/";
         }
 
         //List<Ship> ships = mapService.getShips(map);

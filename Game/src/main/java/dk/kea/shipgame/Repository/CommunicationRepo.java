@@ -31,16 +31,17 @@ public class CommunicationRepo {
     }
 
     public Object recieveMsg(){
+        System.out.println("\n* Recieving message *\n");
         try {
 
             ObjectInputStream ois = new ObjectInputStream(this.link.getInputStream());
-
+            System.out.println("\n* Recieved message *\n");
             return ois.readObject();
 
         } catch (ClassNotFoundException | IOException a) {
             a.printStackTrace();
         }
-
+        System.out.println("\n* ERROR *\n");
         return null;
     }
 
