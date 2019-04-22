@@ -87,11 +87,11 @@ public class mainController {
             return "redirect:/";
         }
 
-        //List<Ship> ships = mapService.getShips(map);
+        List<Ship> ships = mapService.getShips(map);
 
-        model.addAttribute( "state", "server");
+        model.addAttribute( "state", "client");
         model.addAttribute("generatedMap", map);
-        //model.addAttribute("ships", ships);
+        model.addAttribute("ships", ships);
 
         return "index";
     }
@@ -103,11 +103,11 @@ public class mainController {
             return "redirect:/";
         }
 
-        //List<Ship> ships = mapService.getShips(map);
+        List<Ship> ships = mapService.getShips(map);
 
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);
-        //model.addAttribute("ships", ships);
+        model.addAttribute("ships", ships);
 
         return "index";
     }

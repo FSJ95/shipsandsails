@@ -114,21 +114,8 @@
 
                         <div id='ships'>
                             <!-- Used to create ships -->
-                            <div class="manatwar-Red"></div>
-                            <div class="manatwar-White"></div>
-                            <div class="manatwar-Green"></div>
-                            <div class="manatwar-Teal"></div>
-                            <div class="shipoftheline-Red"></div>
-                            <div class="shipoftheline-White"></div>
-                            <div class="shipoftheline-Green"></div>
-                            <div class="shipoftheline-Teal"></div>
-                            <div class="brig-Red"></div>
-                            <div class="brig-White"></div>
-                            <div class="brig-Green"></div>
-                            <div class="brig-Teal"></div>
 
                         </div>
-
 
                     </div>
 
@@ -146,13 +133,13 @@
                             <div class="btn-group-vertical" id="settingButtonGroup">
 
                                 <th:block th:switch="${state}">
-                                    <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="server" disabled>CONNECT TO SERVER</button>
                                     <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="index">CONNECT TO SERVER</button>
+                                    <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="*" disabled>CONNECT TO SERVER</button>
                                 </th:block>
 
                                 <th:block th:switch="${state}">
-                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="server" disabled>CREATE SERVER</button>
                                     <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="index">CREATE SERVER</button>
+                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="server" disabled>CREATE SERVER</button>
                                 </th:block>
 
                                 <button type="button" class="btn btn-dark settingButton" id="musicButton" onclick="music_toggle()" value="MUTE SOUND">UNMUTE MUSIC</button>
@@ -180,19 +167,23 @@
 </div>
 
 <script th:src='@{js/buttons.js}' type="text/javascript"></script>
-<script th:src='@{js/drawShips.js}' type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script th:src='@{js/bootstrap.min.js}' type="text/javascript"></script>
 
-
-
 <th:block th:switch="${state}">
-    <script th:src='@{js/generateMap.js}' type="text/javascript" th:case="server"></script>
-    <script th:inline="javascript">
-        /*<![CDATA[*/ generateMap([[${generatedMap.height}]], [[${generatedMap.width}]]); /*]]>*/
 
-    </script>
+    <th:block th:case="index"></th:block>
+
+    <th:block th:case="*">
+        <script th:src='@{js/generateMap.js}' type="text/javascript"></script>
+        <script th:src='@{js/drawShips.js}' type="text/javascript"></script>
+        <script th:inline="javascript">
+            /*<![CDATA[*/ generateMap([[${generatedMap.height}]], [[${generatedMap.width}]]); /*]]>*/
+            /*<![CDATA[*/ drawShips([[${ships}]]); /*]]>*/
+        </script>
+    </th:block>
+
 </th:block>
 
 

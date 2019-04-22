@@ -64,7 +64,7 @@ public class MapRepo {
             } else if (i==2) {
 
                 int x = 0;
-                int y = map.getHeight();
+                int y = map.getHeight()-1;
 
                 Coordinate coordinate = new Coordinate(x, y);
 
