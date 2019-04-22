@@ -1,11 +1,14 @@
 package dk.kea.shipgame.Controller;
 
 import dk.kea.shipgame.Model.Map;
+import dk.kea.shipgame.Model.Ship;
 import dk.kea.shipgame.Service.MapService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @Controller
@@ -37,7 +40,9 @@ public class mainController {
     @PostMapping("/server")
     public String createServer(@ModelAttribute Map map, Model model){
 
-        model.addAttribute("generatedMap", map);
+        Map generatedMap = map;
+        System.out.println(map.getMapID());
+        model.addAttribute("generatedMap", generatedMap);
 
         return "redirect:/server";
     }
@@ -49,8 +54,11 @@ public class mainController {
             return "redirect:/";
         }
 
+        //List<Ship> ships = mapService.getShips(map);
+
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);
+        //model.addAttribute("ships", ships);
 
         return "index";
     }

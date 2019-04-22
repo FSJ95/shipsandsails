@@ -20,7 +20,7 @@ html, body {
 #map {
     width: 100%;
     height: 100%;
-    background-image: url("/img/water_background.png") ;
+    background-image: url("/img/backgrounds/water_background.png") ;
     background-repeat: repeat;
     background-position: center;
 }
@@ -28,15 +28,36 @@ html, body {
     background-color: #1153a0;
 }
 
+.modal-content {
+    background-image: url("/img/backgrounds/paper_background.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-color: rgba(219,178,149,1.0);
+    border-color: black;
+    font-weight: 600;
+}
+
+.modal-title{
+    font-weight: 800;
+}
+
+.modal-header{
+    border-color: black;
+}
+
+.modal-footer{
+    border-color: black;
+}
+
 .settings {
-    background-image: url("/img/wood_background.png");
+    background-image: url("/img/backgrounds/wood_background.png");
     background-repeat: repeat;
     background-position: top;
     background-color: black;
 }
 
 .stats {
-    background-image: url("/img/wood_background.png");
+    background-image: url("/img/backgrounds/wood_background.png");
     background-repeat: repeat;
     background-position: bottom;
     background-color: black;
@@ -55,12 +76,14 @@ html, body {
 }
 
 .tile {
-    background: url('../img/tile.png');
+    background: url('../img/tiles/tile.png') center no-repeat;
+    background-size: 100% 100%;
     position: absolute;
 }
 
 .outofboundstile {
-    background: url('../img/outofboundstile.png');
+    background: url('../img/tiles/outofboundstile.png') center no-repeat;
+    background-size: 100% 100%;
     position: absolute;
 }
 
@@ -86,3 +109,133 @@ h1 {
 .settingButton {
     margin-bottom: 3vh;
 }
+
+
+/***********************/
+/*        SHIPS        */
+/***********************/
+#ships {
+    height: 100%;
+    width: 100%;
+}
+
+.manatwar-Red {
+    background: url('../img/ships/manatwar/red.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 40px;
+    left: 40px;
+}
+
+.manatwar-White {
+    background: url('../img/ships/manatwar/white.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 40px;
+    left: 90px;
+}
+
+.manatwar-Teal {
+    background: url('../img/ships/manatwar/teal.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 40px;
+    left: 200px;
+}
+
+.manatwar-Green {
+    background: url('../img/ships/manatwar/green.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 40px;
+    left: 150px;
+}
+
+.shipoftheline-Red {
+    background: url('../img/ships/shipoftheline/red.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 90px;
+    left: 40px;
+}
+
+.shipoftheline-White {
+    background: url('../img/ships/shipoftheline/white.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 90px;
+    left: 90px;
+}
+
+.shipoftheline-Teal {
+    background: url('../img/ships/shipoftheline/teal.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 90px;
+    left: 200px;
+}
+
+.shipoftheline-Green {
+    background: url('../img/ships/shipoftheline/green.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 90px;
+    left: 150px;
+}
+
+.brig-Red {
+    background: url('../img/ships/brig/red.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 150px;
+    left: 40px;
+}
+
+.brig-White {
+    background: url('../img/ships/brig/white.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 150px;
+    left: 90px;
+}
+
+.brig-Teal {
+    background: url('../img/ships/brig/teal.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 150px;
+    left: 200px;
+}
+
+.brig-Green {
+    background: url('../img/ships/brig/green.png') center no-repeat;
+    position: absolute;
+    background-size: auto 100%;
+    height: 40px;
+    width: 40px;
+    top: 150px;
+    left: 150px;
+}
+

@@ -1,5 +1,6 @@
 package dk.kea.shipgame.Model;
 
+
 public class Ship {
 
     private int shipId;

@@ -70,7 +70,6 @@ function generateMap(height, width) {
                 div.style.left = tilesCenterWidth + ((i+outofbounds) * tileSize*0.75) + "px";
             }
 
-            div.style.backgroundSize = tileSize + "px";
             div.style.height = tileSize + "px";
             div.style.width = tileSize + "px";
 
