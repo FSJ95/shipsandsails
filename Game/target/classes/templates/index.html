@@ -95,7 +95,19 @@
             <!-- MAIN VIEW STARTED -->
 
             <div class="game view" id="gameView">
+
+
                 <div id="map">
+                    <th:block th:switch="${state}">
+
+                        <th:block th:case="index">
+                            <div style="height: 95vh; line-height: 95vh; text-align: center;">
+                                <h3 style="display: inline-block;; vertical-align: middle;">Please create or connect to a server!</h3>
+                            </div>
+
+                        </th:block>
+
+                    </th:block>
                     <div id="tiles">
                         <!-- Used to create the tiles -->
 
