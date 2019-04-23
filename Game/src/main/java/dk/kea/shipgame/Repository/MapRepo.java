@@ -24,7 +24,7 @@ public class MapRepo {
         return template.query(sql, rowMapper);
     }
 
-    public List<Ship> generateInitalShips(Map map){
+    public List<Ship> generateInitalShips(Map map, int player_nationality){
 
         List<Ship> ships = new ArrayList<>();
         List<Nationality> nationalities = fetchAllNationalities();
@@ -34,7 +34,7 @@ public class MapRepo {
         Nationality myNationality = new Nationality();
 
         for(int i=0; i<len; i++) {
-            if (nationalities.get(i).getId() == map.getPlayer_nationality()) {
+            if (nationalities.get(i).getId() == player_nationality) {
                 myNationality = nationalities.get(i);
             }
         }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en" xmlns:th="www.thymleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -44,12 +45,6 @@
                             <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
                         </th:block>
                     </select>
-                    <label for="enemy-nationality" class="col-form-label">Enemy nationality:</label>
-                    <select class="form-control" id="enemy-nationality" name="enemy_nationality">
-                        <th:block th:each="nationality : ${nationalities}">
-                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
-                        </th:block>
-                    </select>
                 </form>
 
             </div>
@@ -75,18 +70,10 @@
             </div>
             <div class="modal-body">
                 <form action="/client" method="post" id="createClientForm">
-                    <div class="form-group col-md-12">
-                        <label for="map-height" class="col-form-label">Server IP-Adress:</label>
-                        <input type="text" name="ipadress" class="form-control" id="map-height" placeholder="IP Adress">
-                    </div>
+                    <label for="ip-adress" class="col-form-label">Server IP-Adress:</label>
+                    <input type="text" name="ipadress" class="form-control" id="ip-adress" placeholder="IP Adress">
                     <label for="player-nationality"class="col-form-label">Your nationality:</label>
                     <select class="form-control" id="player-nationality" name="player_nationality">
-                        <th:block th:each="nationality : ${nationalities}">
-                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
-                        </th:block>
-                    </select>
-                    <label for="enemy-nationality" class="col-form-label">Enemy nationality:</label>
-                    <select class="form-control" id="enemy-nationality" name="enemy_nationality">
                         <th:block th:each="nationality : ${nationalities}">
                             <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
                         </th:block>

@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @Controller
-@SessionAttributes(value = { "generatedMap" })
+@SessionAttributes(value = { "generatedMap", "nationality" })
 public class mainController {
 
     @Autowired
@@ -24,12 +24,12 @@ public class mainController {
 
     // Initalisere model attribute med MapID på -1, så hvis brugeren prøver at tilgå
     // "/server" uden at have oprettet server, bliver han sendt tilbage til forsiden.
+
     @ModelAttribute("generatedMap")
     public Map getMap() {
         Map map = new Map();
         map.setMapID(-1);
         return map;
-
     }
 
     @GetMapping("/")
@@ -42,7 +42,7 @@ public class mainController {
     }
 
     @PostMapping("/server")
-    public String createServer(@ModelAttribute Map map, Model model){
+    public String createServer(@ModelAttribute Map map, @ModelAttribute("player_nationality") String player_nationality, Model model){
 
 
         if (communicationService.initHost()){
@@ -52,13 +52,14 @@ public class mainController {
         }
 
         model.addAttribute("generatedMap", map);
+        model.addAttribute("nationality", player_nationality);
 
         return "redirect:/server";
     }
 
     @PostMapping("/client")
-    public String createClient(@ModelAttribute("ipadress") String ipadress, Model model){
-        Map map = new Map();
+    public String createClient(@ModelAttribute("ipadress") String ipadress, @ModelAttribute("player_nationality") String player_nationality, Model model){
+        Map map;
 
         if (communicationService.initComm(ipadress)) {
             map = (Map) communicationService.recieveMsg();
@@ -67,6 +68,7 @@ public class mainController {
         }
 
         model.addAttribute("generatedMap", map);
+        model.addAttribute("nationality", player_nationality);
 
         return "redirect:/client";
     }
@@ -74,13 +76,13 @@ public class mainController {
 
 
     @GetMapping("/client")
-    public String client(@ModelAttribute("generatedMap") Map map, Model model){
+    public String client(@ModelAttribute("generatedMap") Map map, @ModelAttribute("nationality") String player_nationality, Model model){
 
         if(map.getMapID() < 0){
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map);
+        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality));
 
         model.addAttribute( "state", "client");
         model.addAttribute("generatedMap", map);
@@ -90,13 +92,13 @@ public class mainController {
     }
 
     @GetMapping("/server")
-    public String server(@ModelAttribute("generatedMap") Map map, Model model){
+    public String server(@ModelAttribute("generatedMap") Map map, @ModelAttribute("nationality") String player_nationality, Model model){
 
         if(map.getMapID() < 0){
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map);
+        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality));
 
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);

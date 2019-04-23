@@ -43,9 +43,6 @@ var Direction = {
     NW : 5
 };
 
-// Freeze our enums so they cant be changed.
-Object.freeze(Direction);
-
 // Used to turn our shiptype numbers into corresponding ships.
 var ShipType = {
     1 : "brig",
@@ -53,7 +50,8 @@ var ShipType = {
     3 : "manatwar"
 };
 
-// Freeze our shiptypes so they cant be changed.
+// Freeze our enums so they cant be changed.
+Object.freeze(Direction);
 Object.freeze(ShipType);
 
 function drawShips(ShipList) {
@@ -90,6 +88,5 @@ function drawShips(ShipList) {
         ships.push(ship);
 
         map.append(div);
-
     }
 }
