@@ -87,11 +87,11 @@ public class MapRepo {
                 if (isClient) {
                     x = map.getWidth()-1;
                     dir = Direction.NW;
-                    id = 3;
+                    id = 6;
                 } else {
                     x = 0;
                     dir = Direction.NE;
-                    id = 6;
+                    id = 3;
                 }
                 int y = map.getHeight()-1;
                 Coordinate coordinate = new Coordinate(x, y);

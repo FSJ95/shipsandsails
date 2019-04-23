@@ -85,6 +85,10 @@ function drawShips(ShipList) {
             }
         }
 
+        div.onclick = function() {
+            initalizeMove(ship);
+        };
+
         ships.push(ship);
 
         map.append(div);

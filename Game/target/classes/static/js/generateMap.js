@@ -69,8 +69,13 @@ function generateMap(height, width) {
             div.style.height = tileSize + "px";
             div.style.width = tileSize + "px";
 
+            let tile = new Tile(div, i,j)
+            div.onclick = function() {
+                finalizeMove(tile);
+            };
+
             // Adds the div, x position and y position to the tiles list.
-            tiles.push( new Tile(div, i,j) );
+            tiles.push(tile);
 
             // Appends the newly created div(tile) to the webpage.
             map.append(div);
