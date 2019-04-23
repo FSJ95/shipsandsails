@@ -19,7 +19,8 @@ public class MoveRepo implements IMove {
     public void movement(List<Ship> ships, List<Order> orders, Weather weather) {
 
         Coordinate coordinate = new Coordinate(5,5);
-        Ship ship1 = new Ship(1, 1, "Danmark", "Kaptajn Boosted", coordinate, Direction.SW,
+        Nationality nationality = new Nationality(1,"Danmark", "Red", "Captain Boosted");
+        Ship ship1 = new Ship(1, 1, nationality, coordinate, Direction.SW,
                 0, 100, 100, 100, 0, 0);
         ships.add(ship1);
 

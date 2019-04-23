@@ -24,7 +24,7 @@ public class MapRepo {
         return template.query(sql, rowMapper);
     }
 
-    public List<Ship> getShips(Map map){
+    public List<Ship> generateInitalShips(Map map, int player_nationality, boolean isClient){
 
         List<Ship> ships = new ArrayList<>();
         List<Nationality> nationalities = fetchAllNationalities();
@@ -34,7 +34,7 @@ public class MapRepo {
         Nationality myNationality = new Nationality();
 
         for(int i=0; i<len; i++) {
-            if (nationalities.get(i).getId() == map.getPlayer_nationality()) {
+            if (nationalities.get(i).getId() == player_nationality) {
                 myNationality = nationalities.get(i);
             }
         }
@@ -42,33 +42,51 @@ public class MapRepo {
         for (int i = 0; i<3; i++) {
             if (i==0) {
 
-                int x = 0;
+                int x;
+                Direction dir;
+                if (isClient) {
+                    x = map.getWidth()-1;
+                    dir = Direction.NW;
+                } else {
+                    x = 0;
+                    dir = Direction.SE;
+                }
+
                 int y = 0;
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(1, 1, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.SW,
+                Ship ship = new Ship(1, 1, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
+
             } else if (i==1) {
-
-                int x = 0;
+                int x;
+                Direction dir;
+                if (isClient) {
+                    x = map.getWidth()-1;
+                    dir = Direction.SW;
+                } else {
+                    x = 0;
+                    dir = Direction.SE;
+                }
                 int y = map.getHeight()/2;
-
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(2, 2, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.N,
+                Ship ship = new Ship(2, 2, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
-
 
             } else if (i==2) {
-
-                int x = 0;
-                int y = map.getHeight();
-
+                int x;
+                Direction dir;
+                if (isClient) {
+                    x = map.getWidth()-1;
+                    dir = Direction.NW;
+                } else {
+                    x = 0;
+                    dir = Direction.NE;
+                }
+                int y = map.getHeight()-1;
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(3, 3, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.N,
+                Ship ship = new Ship(3, 3, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
@@ -77,7 +95,5 @@ public class MapRepo {
 
         return ships;
     }
-
-
 
 }

@@ -5,8 +5,7 @@ public class Ship {
 
     private int shipId;
     private int shipType;
-    private String nationality;
-    private String name;
+    private Nationality nationality;
     private Coordinate coordinate;
     private Direction direction; //ENUM, N, NE, SE, S, SW, NW
     private int speed; //change: speed last round +/- calculated change
@@ -19,11 +18,10 @@ public class Ship {
     public Ship() {
     }
 
-    public Ship(int shipId, int shipType, String nationality, String name, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
+    public Ship(int shipId, int shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
         this.shipId = shipId;
         this.shipType = shipType;
         this.nationality = nationality;
-        this.name = name;
         this.coordinate = coordinate;
         this.direction = direction;
         this.speed = speed;
@@ -58,20 +56,12 @@ public class Ship {
         this.shipType = shipType;
     }
 
-    public String getNationality() {
+    public Nationality getNationality() {
         return nationality;
     }
 
-    public void setNationality(String nationality) {
+    public void setNationality(Nationality nationality) {
         this.nationality = nationality;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Coordinate getCoordinate() {
