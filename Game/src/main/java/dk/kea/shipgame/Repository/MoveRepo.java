@@ -23,7 +23,7 @@ public class MoveRepo implements IMove {
                 0, 100, 100, 100, 0, 0);
         ships.add(ship1);
 
-        Order order = new Order(1, 1, 1, 2, coordinateList, true, false, 1, 1);
+        Order order = new Order(1, 1, 1, 2, coordinateList, true, false, 1, coordinate);
 
 
 
