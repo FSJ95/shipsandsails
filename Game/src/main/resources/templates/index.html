@@ -126,7 +126,7 @@
 
                                 <th:block th:switch="${state}">
                                     <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="index">CREATE SERVER</button>
-                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="server" disabled>CREATE SERVER</button>
+                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="*" disabled>CREATE SERVER</button>
                                 </th:block>
 
                                 <button type="button" class="btn btn-dark settingButton" id="musicButton" onclick="music_toggle()" value="MUTE SOUND">UNMUTE MUSIC</button>

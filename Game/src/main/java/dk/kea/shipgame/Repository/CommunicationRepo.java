@@ -100,6 +100,7 @@ public class CommunicationRepo {
     public void resetCom(){
         try {
             link.close();
+            servSock.close();
         } catch (Exception e) {
             System.out.println(e);
         }
