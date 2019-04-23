@@ -21,9 +21,9 @@ public class MapService {
 
     }
 
-    public List<Ship> generateInitalShips(Map map, int player_nationality){
+    public List<Ship> generateInitalShips(Map map, int player_nationality, boolean isClient){
 
-        return mapRepo.generateInitalShips(map, player_nationality);
+        return mapRepo.generateInitalShips(map, player_nationality, isClient);
     }
 
 }

@@ -82,7 +82,7 @@ public class mainController {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality));
+        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), true);
 
         model.addAttribute( "state", "client");
         model.addAttribute("generatedMap", map);
@@ -98,7 +98,7 @@ public class mainController {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality));
+        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), false);
 
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);
