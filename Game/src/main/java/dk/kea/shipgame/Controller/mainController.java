@@ -46,34 +46,42 @@ public class mainController {
 
         if (communicationService.initHost()){
             communicationService.sendMsg((Object) map);
+
+            List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), false);
+            model.addAttribute("generatedMap", map);
+            model.addAttribute("shipList", ships);
+
+            communicationService.sendMsg(ships);
+
+            ships.addAll((List<Ship>) communicationService.recieveMsg());
+            return "redirect:/server";
         } else {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), false);
-        model.addAttribute("generatedMap", map);
-        model.addAttribute("shipList", ships);
-
-        return "redirect:/server";
     }
 
     @PostMapping("/client")
     public String createClient(@ModelAttribute("ipadress") String ipadress, @ModelAttribute("player_nationality") String player_nationality, Model model){
-        Map map;
 
         if (communicationService.initComm(ipadress)) {
 
-            map = (Map) communicationService.recieveMsg();
+            Map map = (Map) communicationService.recieveMsg();
+            List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), true);
+            model.addAttribute("generatedMap", map);
+            model.addAttribute("shipList", ships);
+            communicationService.sendMsg(ships);
+
+            ships.addAll((List<Ship>) communicationService.recieveMsg());
+            return "redirect:/client";
 
         } else {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), true);
-        model.addAttribute("generatedMap", map);
-        model.addAttribute("shipList", ships);
 
-        return "redirect:/client";
+
+
     }
 
 
