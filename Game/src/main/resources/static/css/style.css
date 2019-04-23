@@ -12,6 +12,7 @@
 html, body {
     height: 100%;
     background-color: #000000;
+    overflow: hidden;
 }
 .vh-50 {
     height: 50vh !important;
@@ -235,3 +236,12 @@ h1 {
     left: 150px;
 }
 
+.list-group-flush .list-group-item {
+    padding: 7px 15px 7px 15px;
+    height: 20vh;
+    background-color: transparent;
+}
+
+p {
+    margin: 0px;
+}
