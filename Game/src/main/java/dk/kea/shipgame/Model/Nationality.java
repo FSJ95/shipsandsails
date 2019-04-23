@@ -1,6 +1,8 @@
 package dk.kea.shipgame.Model;
 
-public class Nationality {
+import java.io.Serializable;
+
+public class Nationality implements Serializable {
 
     private int id;
     private String country;

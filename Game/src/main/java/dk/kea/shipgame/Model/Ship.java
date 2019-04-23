@@ -1,7 +1,9 @@
 package dk.kea.shipgame.Model;
 
 
-public class Ship {
+import java.io.Serializable;
+
+public class Ship implements Serializable{
 
     private int shipId;
     private int shipType;

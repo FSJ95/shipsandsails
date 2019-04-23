@@ -35,6 +35,7 @@ public class mainController {
     @GetMapping("/")
     public String index(Model model){
 
+        communicationService.resetCom();
         model.addAttribute("nationalities", mapService.fetchAllNationalities());
         model.addAttribute( "state", "index");
 

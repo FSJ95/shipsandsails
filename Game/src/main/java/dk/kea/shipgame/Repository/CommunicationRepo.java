@@ -96,4 +96,12 @@ public class CommunicationRepo {
             return false;
         }
     }
+
+    public void resetCom(){
+        try {
+            link.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }

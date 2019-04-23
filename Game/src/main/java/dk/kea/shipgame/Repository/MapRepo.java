@@ -44,49 +44,58 @@ public class MapRepo {
 
                 int x;
                 Direction dir;
+                int id;
                 if (isClient) {
                     x = map.getWidth()-1;
-                    dir = Direction.NW;
+                    dir = Direction.SW;
+                    id = 4;
                 } else {
                     x = 0;
                     dir = Direction.SE;
+                    id = 1;
                 }
 
                 int y = 0;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(1, 1, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, 1, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
             } else if (i==1) {
                 int x;
                 Direction dir;
+                int id;
                 if (isClient) {
                     x = map.getWidth()-1;
-                    dir = Direction.SW;
+                    dir = Direction.NW;
+                    id = 5;
                 } else {
                     x = 0;
                     dir = Direction.SE;
+                    id = 2;
                 }
                 int y = map.getHeight()/2;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(2, 2, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, 2, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
             } else if (i==2) {
                 int x;
                 Direction dir;
+                int id;
                 if (isClient) {
                     x = map.getWidth()-1;
                     dir = Direction.NW;
+                    id = 3;
                 } else {
                     x = 0;
                     dir = Direction.NE;
+                    id = 6;
                 }
                 int y = map.getHeight()-1;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(3, 3, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, 3, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
@@ -95,5 +104,4 @@ public class MapRepo {
 
         return ships;
     }
-
 }

@@ -46,4 +46,8 @@ public class CommunicationService {
     public Object recieveMsg(){
         return communicationRepo.recieveMsg();
     }
+
+    public void resetCom(){
+        communicationRepo.resetCom();
+    }
 }

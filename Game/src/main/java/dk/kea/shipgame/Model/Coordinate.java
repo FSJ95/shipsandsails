@@ -1,6 +1,8 @@
 package dk.kea.shipgame.Model;
 
-public class Coordinate {
+import java.io.Serializable;
+
+public class Coordinate implements Serializable {
 
     int x;
     int y;
