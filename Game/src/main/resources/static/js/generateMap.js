@@ -35,12 +35,8 @@ function generateMap(height, width) {
 
     if (tileSizeFromHeight < tileSizeFromWidth) {
         tileSize = Math.round(tileSizeFromHeight);
-        console.log("height")
-        console.log(tileSize)
     } else {
         tileSize = Math.round(tileSizeFromWidth);
-        console.log("width")
-        console.log(tileSize)
     }
 
     // Center the map in the game container

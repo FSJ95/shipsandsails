@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="52ff5a24-2f99-4918-9a0f-de67448dffc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
+            <state relative-caret-position="515">
               <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
               <folding>
                 <element signature="e#888#895#1" expanded="true" />
@@ -72,17 +71,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/generateMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-481">
-              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="-351">
+              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="9">
+              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+            <state relative-caret-position="-246">
+              <caret line="70" column="107" selection-start-line="70" selection-start-column="107" selection-end-line="70" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/javascriptController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/buttons.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" />
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/AttackRepo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -192,8 +190,9 @@
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Map.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" />
+        <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" />
       </list>
     </option>
   </component>
@@ -371,7 +370,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556016971725" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556018360930" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -475,13 +474,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146665000" />
+    <option name="totallyTimeSpent" value="147428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49625936" visible="true" weight="0.26171243" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49625936" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" sideWeight="0.50374067" side_tool="true" weight="0.26171243" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -492,7 +491,7 @@
       <window_info id="Learn" order="8" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.45068493" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.45068493" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -859,33 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/generateMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-481">
-          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-          <folding>
-            <element signature="e#888#895#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -905,8 +877,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="9">
+          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/generateMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+          <folding>
+            <element signature="e#888#895#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246">
+          <caret line="70" column="107" selection-start-line="70" selection-start-column="107" selection-end-line="70" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -35,6 +35,7 @@ public class CommunicationRepo {
         try {
 
             ObjectInputStream ois = new ObjectInputStream(this.link.getInputStream());
+            
             System.out.println("\n* Recieved message *\n");
             return ois.readObject();
 
