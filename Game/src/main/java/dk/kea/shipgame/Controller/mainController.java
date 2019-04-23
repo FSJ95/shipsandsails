@@ -8,12 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 @Controller
-@SessionAttributes(value = { "generatedMap", "shipList" })
 public class mainController {
 
     @Autowired
@@ -22,15 +24,8 @@ public class mainController {
     @Autowired
     CommunicationService communicationService;
 
-    // Initalisere model attribute med MapID på -1, så hvis brugeren prøver at tilgå
-    // "/server" uden at have oprettet server, bliver han sendt tilbage til forsiden.
-
-    @ModelAttribute("generatedMap")
-    public Map getMap() {
-        Map map = new Map();
-        map.setMapID(-1);
-        return map;
-    }
+    List<Ship> shipList = new ArrayList<>();
+    Map map;
 
     @GetMapping("/")
     public String index(Model model){
@@ -43,18 +38,22 @@ public class mainController {
     }
 
     @PostMapping("/server")
-    public String createServer(@ModelAttribute Map map, @ModelAttribute("player_nationality") String player_nationality, Model model){
+    public String createServer(WebRequest wr, Model model){
+        int mapHeight = Integer.parseInt(Objects.requireNonNull(wr.getParameter("height")));
+        int mapWidth = Integer.parseInt(Objects.requireNonNull(wr.getParameter("width")));
+        map = new Map(mapHeight,mapWidth);
+
+        int playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
+
+        shipList = mapService.generateInitalShips(map, playerNationality, false);
 
         if (communicationService.initHost()){
+
             communicationService.sendMsg((Object) map);
 
-            List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), false);
-            model.addAttribute("generatedMap", map);
-            model.addAttribute("shipList", ships);
+            communicationService.sendMsg((Object) shipList);
 
-            communicationService.sendMsg((Object) ships);
-
-            ships.addAll((List<Ship>) communicationService.recieveMsg());
+            shipList.addAll((List<Ship>) communicationService.recieveMsg());
             return "redirect:/server";
         } else {
             return "redirect:/";
@@ -63,54 +62,44 @@ public class mainController {
     }
 
     @PostMapping("/client")
-    public String createClient(@ModelAttribute("ipadress") String ipadress, @ModelAttribute("player_nationality") String player_nationality, Model model){
+    public String createClient(WebRequest wr, Model model){
 
-        if (communicationService.initComm(ipadress)) {
+        String ipAdress = wr.getParameter("ipadress");
+        int playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
 
-            Map map = (Map) communicationService.recieveMsg();
-            List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), true);
-            model.addAttribute("generatedMap", map);
-            model.addAttribute("shipList", ships);
-            communicationService.sendMsg((Object) ships);
+        if (communicationService.initComm(ipAdress)) {
 
-            ships.addAll((List<Ship>) communicationService.recieveMsg());
+            map = (Map) communicationService.recieveMsg();
+
+            shipList = mapService.generateInitalShips(map, playerNationality, true);
+
+            communicationService.sendMsg((Object) shipList);
+
+            shipList.addAll((List<Ship>) communicationService.recieveMsg());
             return "redirect:/client";
 
         } else {
             return "redirect:/";
         }
 
-
-
-
     }
 
-
-
     @GetMapping("/client")
-    public String client(@ModelAttribute("generatedMap") Map map, @ModelAttribute("shipList") List<Ship> ships, Model model){
-
-        if(map.getMapID() < 0){
-            return "redirect:/";
-        }
+    public String client(Model model){
 
         model.addAttribute( "state", "client");
         model.addAttribute("generatedMap", map);
-        model.addAttribute("ships", ships);
+        model.addAttribute("shipList", shipList);
 
         return "index";
     }
 
     @GetMapping("/server")
-    public String server(@ModelAttribute("generatedMap") Map map, @ModelAttribute("shipList") List<Ship> ships, Model model){
-
-        if(map.getMapID() < 0){
-            return "redirect:/";
-        }
+    public String server(Model model){
 
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);
-        model.addAttribute("ships", ships);
+        model.addAttribute("shipList", shipList);
 
         return "index";
     }

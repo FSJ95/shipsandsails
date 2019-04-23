@@ -92,7 +92,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="vh-100 col-9 no-gutters">
-        <!-- MAIN VIEW STARTED -->
+            <!-- MAIN VIEW STARTED -->
 
             <div class="game view" id="gameView">
                 <div id="map">
@@ -109,43 +109,43 @@
                 </div>
             </div>
 
-        <!-- MAIN VIEW STOPPED -->
+            <!-- MAIN VIEW STOPPED -->
         </div>
         <div class="vh-100 col-3">
             <div class="row">
                 <div class="vh-50 col-12 no-gutters" >
                     <!-- TOP RIGHT VIEW STARTED-->
-                        <div class="settings view">
-                            <h1>SHIPS & SAILS</h1>
-                            <div class="btn-group-vertical" id="settingButtonGroup">
+                    <div class="settings view">
+                        <h1>SHIPS & SAILS</h1>
+                        <div class="btn-group-vertical" id="settingButtonGroup">
 
-                                <th:block th:switch="${state}">
-                                    <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="index">CONNECT TO SERVER</button>
-                                    <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="*" disabled>CONNECT TO SERVER</button>
-                                </th:block>
+                            <th:block th:switch="${state}">
+                                <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="index">CONNECT TO SERVER</button>
+                                <button type="button" class="btn btn-dark settingButton" data-toggle="modal" data-target="#connectToServerModal" th:case="*" disabled>CONNECT TO SERVER</button>
+                            </th:block>
 
-                                <th:block th:switch="${state}">
-                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="index">CREATE SERVER</button>
-                                    <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="*" disabled>CREATE SERVER</button>
-                                </th:block>
+                            <th:block th:switch="${state}">
+                                <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="index">CREATE SERVER</button>
+                                <button type="button" class="btn btn-dark settingButton"  data-toggle="modal" data-target="#createServerModal" th:case="*" disabled>CREATE SERVER</button>
+                            </th:block>
 
-                                <button type="button" class="btn btn-dark settingButton" id="musicButton" onclick="music_toggle()" value="MUTE SOUND">UNMUTE MUSIC</button>
-
-                            </div>
-
-
-
+                            <button type="button" class="btn btn-dark settingButton" id="musicButton" onclick="music_toggle()" value="MUTE SOUND">UNMUTE MUSIC</button>
 
                         </div>
+
+
+
+
+                    </div>
                     <!-- TOP RIGHT VIEW STOPPED-->
                 </div>
                 <div class="vh-50 col-12 no-gutters" >
                     <!--BOTTOM RIGHT VIEW STARTED-->
-                        <div class="stats view">
+                    <div class="stats view">
 
 
 
-                        </div>
+                    </div>
                     <!--BOTTOM RIGHT VIEW STOPPED-->
                 </div>
             </div>
@@ -167,7 +167,7 @@
         <script th:src='@{js/drawShips.js}' type="text/javascript"></script>
         <script th:inline="javascript">
             /*<![CDATA[*/ generateMap([[${generatedMap.height}]], [[${generatedMap.width}]]); /*]]>*/
-            /*<![CDATA[*/ drawShips([[${ships}]]); /*]]>*/
+            /*<![CDATA[*/ drawShips([[${shipList}]]); /*]]>*/
         </script>
     </th:block>
 
