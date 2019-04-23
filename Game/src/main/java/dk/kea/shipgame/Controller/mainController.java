@@ -5,16 +5,9 @@ import dk.kea.shipgame.Model.Ship;
 import dk.kea.shipgame.Service.CommunicationService;
 import dk.kea.shipgame.Service.MapService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
 import java.util.List;
 
@@ -87,7 +80,7 @@ public class mainController {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.getShips(map);
+        List<Ship> ships = mapService.generateInitalShips(map);
 
         model.addAttribute( "state", "client");
         model.addAttribute("generatedMap", map);
@@ -103,7 +96,7 @@ public class mainController {
             return "redirect:/";
         }
 
-        List<Ship> ships = mapService.getShips(map);
+        List<Ship> ships = mapService.generateInitalShips(map);
 
         model.addAttribute( "state", "server");
         model.addAttribute("generatedMap", map);

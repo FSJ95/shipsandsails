@@ -24,7 +24,7 @@ public class MapRepo {
         return template.query(sql, rowMapper);
     }
 
-    public List<Ship> getShips(Map map){
+    public List<Ship> generateInitalShips(Map map){
 
         List<Ship> ships = new ArrayList<>();
         List<Nationality> nationalities = fetchAllNationalities();
@@ -45,30 +45,25 @@ public class MapRepo {
                 int x = 0;
                 int y = 0;
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(1, 1, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.SW,
+                Ship ship = new Ship(1, 1, myNationality, coordinate, Direction.SE,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
+
             } else if (i==1) {
 
                 int x = 0;
                 int y = map.getHeight()/2;
-
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(2, 2, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.N,
+                Ship ship = new Ship(2, 2, myNationality, coordinate, Direction.SE,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
-
 
             } else if (i==2) {
 
                 int x = 0;
                 int y = map.getHeight()-1;
-
                 Coordinate coordinate = new Coordinate(x, y);
-
-                Ship ship = new Ship(3, 3, myNationality.getCountry(), myNationality.getCaptain(), coordinate, Direction.N,
+                Ship ship = new Ship(3, 3, myNationality, coordinate, Direction.NE,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
@@ -77,7 +72,5 @@ public class MapRepo {
 
         return ships;
     }
-
-
 
 }
