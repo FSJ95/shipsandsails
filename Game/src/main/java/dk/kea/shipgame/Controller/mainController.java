@@ -51,7 +51,7 @@ public class mainController {
             model.addAttribute("generatedMap", map);
             model.addAttribute("shipList", ships);
 
-            communicationService.sendMsg(ships);
+            communicationService.sendMsg((Object) ships);
 
             ships.addAll((List<Ship>) communicationService.recieveMsg());
             return "redirect:/server";
@@ -70,7 +70,7 @@ public class mainController {
             List<Ship> ships = mapService.generateInitalShips(map, Integer.parseInt(player_nationality), true);
             model.addAttribute("generatedMap", map);
             model.addAttribute("shipList", ships);
-            communicationService.sendMsg(ships);
+            communicationService.sendMsg((Object) ships);
 
             ships.addAll((List<Ship>) communicationService.recieveMsg());
             return "redirect:/client";
