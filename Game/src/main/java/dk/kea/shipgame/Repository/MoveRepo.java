@@ -20,12 +20,15 @@ public class MoveRepo implements IMove {
 
         Coordinate coordinate = new Coordinate(5,5);
         Nationality nationality = new Nationality(1,"Danmark", "Red", "Captain Boosted");
-        Ship ship1 = new Ship(1, 1, nationality, coordinate, Direction.SW,
+        Ship ship1 = new Ship(1, Shiptype.SHIP_OF_THE_LINE, nationality, coordinate, Direction.SW,
                 0, 100, 100, 100, 0, 0);
         ships.add(ship1);
 
         Order order = new Order(1, 1, 1, 2, coordinateList, true, false, 1, coordinate);
 
+        String sql = "UPDATE ships SET sailors=?, hull=? WHERE id=?";
+
+        template.update(sql, ship1.getSailors(), ship1.getHull_health());
 
 
         }
