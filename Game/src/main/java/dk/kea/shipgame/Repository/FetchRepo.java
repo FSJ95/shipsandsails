@@ -50,7 +50,7 @@ public class FetchRepo {
 
         // Set the chosen player nationality
         for(int i=0; i<len; i++) {
-            if (nationalities.get(i).getId() == player_nationality) {
+            if (nationalities.get(i).getNationality_id() == player_nationality) {
                 nationality = nationalities.get(i);
             }
         }

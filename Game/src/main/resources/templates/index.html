@@ -42,7 +42,7 @@
                     <label for="player-nationality"class="col-form-label">Your nationality:</label>
                     <select class="form-control" id="player-nationality" name="player_nationality">
                         <th:block th:each="nationality : ${nationalities}">
-                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                            <option th:value="${nationality.nationality_id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
                         </th:block>
                     </select>
                 </form>
@@ -75,7 +75,7 @@
                     <label for="player-nationality"class="col-form-label">Your nationality:</label>
                     <select class="form-control" id="player-nationality" name="player_nationality">
                         <th:block th:each="nationality : ${nationalities}">
-                            <option th:value="${nationality.id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
+                            <option th:value="${nationality.nationality_id}" th:text="${nationality.country} + '  -  ' + ${nationality.captain}">First Option</option>
                         </th:block>
                     </select>
                 </form>

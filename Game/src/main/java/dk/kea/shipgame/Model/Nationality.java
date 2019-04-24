@@ -20,11 +20,11 @@ public class Nationality implements Serializable {
         this.captain = captain;
     }
 
-    public int getId() {
+    public int getNationality_id() {
         return nationality_id;
     }
 
-    public void setId(int nationality_id) {
+    public void setNationality_id(int nationality_id) {
         this.nationality_id = nationality_id;
     }
 

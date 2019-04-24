@@ -97,7 +97,7 @@ function drawShips(ShipList) {
         };
 
         ships.push(ship);
-
+        console.log(ship);
         map.append(div);
     }
 }

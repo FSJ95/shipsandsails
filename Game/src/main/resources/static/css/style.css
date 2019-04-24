@@ -121,7 +121,7 @@ h1 {
 }
 
 .ManatWar-Red {
-    background: url('../img/ships/manatwar/red.png') center no-repeat;
+    background: url('../img/ships/ManatWar/Red.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -131,7 +131,7 @@ h1 {
 }
 
 .ManatWar-White {
-    background: url('../img/ships/manatwar/white.png') center no-repeat;
+    background: url('../img/ships/ManatWar/White.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -141,7 +141,7 @@ h1 {
 }
 
 .ManatWar-Teal {
-    background: url('../img/ships/manatwar/teal.png') center no-repeat;
+    background: url('../img/ships/ManatWar/Teal.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -151,7 +151,7 @@ h1 {
 }
 
 .ManatWar-Green {
-    background: url('../img/ships/manatwar/green.png') center no-repeat;
+    background: url('../img/ships/ManatWar/Green.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -161,7 +161,7 @@ h1 {
 }
 
 .ShipoftheLine-Red {
-    background: url('../img/ships/shipoftheline/red.png') center no-repeat;
+    background: url('../img/ships/ShipoftheLine/Red.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -171,7 +171,7 @@ h1 {
 }
 
 .ShipoftheLine-White {
-    background: url('../img/ships/shipoftheline/white.png') center no-repeat;
+    background: url('../img/ships/ShipoftheLine/White.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -181,7 +181,7 @@ h1 {
 }
 
 .ShipoftheLine-Teal {
-    background: url('../img/ships/shipoftheline/teal.png') center no-repeat;
+    background: url('../img/ships/ShipoftheLine/Teal.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -191,7 +191,7 @@ h1 {
 }
 
 .ShipoftheLine-Green {
-    background: url('../img/ships/shipoftheline/green.png') center no-repeat;
+    background: url('../img/ships/ShipoftheLine/Green.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
     height: 40px;
@@ -201,25 +201,25 @@ h1 {
 }
 
 .Brig-Red {
-    background: url('../img/ships/brig/red.png') center no-repeat;
+    background: url('../img/ships/Brig/Red.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
 }
 
 .Brig-White {
-    background: url('../img/ships/brig/white.png') center no-repeat;
+    background: url('../img/ships/Brig/White.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
 }
 
 .Brig-Teal {
-    background: url('../img/ships/brig/teal.png') center no-repeat;
+    background: url('../img/ships/Brig/Teal.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
 }
 
 .Brig-Green {
-    background: url('../img/ships/brig/green.png') center no-repeat;
+    background: url('../img/ships/Brig/Green.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
 }
