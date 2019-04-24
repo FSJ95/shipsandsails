@@ -111,7 +111,7 @@ public class FetchRepo {
             }
 
             coordinate = new Coordinate(x, y);
-            ship = new Ship(id, shiptypes.get(i), nationality, coordinate, dir, 0, shiptypes.get(i).getMax_health(), 0, 0);
+            ship = new Ship(id, shiptypes.get(i), nationality, coordinate, dir, 0, shiptypes.get(i).getMax_health(), 0, 1);
             ships.add(ship);
 
         }

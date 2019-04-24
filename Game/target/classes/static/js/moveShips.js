@@ -31,6 +31,9 @@ function changeStatsView(ship) {
     let shipcaptain = document.getElementById("statscaptain");
     let shiphealth = document.getElementById("statshealth");
     let shipspeed = document.getElementById("statsspeed");
+    let shipcanon = document.getElementById("statscanon");
+    let shipchain = document.getElementById("statschain");
+    let shipgrape = document.getElementById("statsgrape");
 
     // Changing the ship type element stats.
     shiptype.innerText = ship.shipType.type;
@@ -67,4 +70,22 @@ function changeStatsView(ship) {
 
     shipspeed.innerText = ship.speed + " / " + currentMaxSpeed;
     shipspeed.style.width = percentageOfMaxSpeed + "%";
+
+    // Changing the ship ammo stats.
+    shipcanon.className = shipcanon.className.replace(" active", "");
+    shipchain.className = shipchain.className.replace(" active", "");
+    shipgrape.className = shipgrape.className.replace(" active", "");
+
+    if (ship.currentAmmunitionType === 0) {
+
+        shipcanon.className += " active"
+
+    } else if (ship.currentAmmunitionType === 1) {
+
+        shipchain.className += " active"
+
+    } else if (ship.currentAmmunitionType === 2) {
+
+        shipgrape.className += " active"
+    }
 }
