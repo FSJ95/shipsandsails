@@ -2,11 +2,12 @@ package dk.kea.shipgame.Model;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Ship implements Serializable{
 
     private int shipId;
-    private int shipType;
+    private Shiptype shipType; //0=Brig, 1=Ship of the line, 2=Man at war
     private Nationality nationality;
     private Coordinate coordinate;
     private Direction direction; //ENUM, N, NE, SE, S, SW, NW
@@ -20,7 +21,7 @@ public class Ship implements Serializable{
     public Ship() {
     }
 
-    public Ship(int shipId, int shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
+    public Ship(int shipId, Shiptype shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
         this.shipId = shipId;
         this.shipType = shipType;
         this.nationality = nationality;
@@ -34,14 +35,6 @@ public class Ship implements Serializable{
         this.currentAmmunitionType = currentAmmunitionType;
     }
 
-    public int getCurrentAmmunitionType() {
-        return currentAmmunitionType;
-    }
-
-    public void setCurrentAmmunitionType(int currentAmmunitionType) {
-        this.currentAmmunitionType = currentAmmunitionType;
-    }
-
     public int getShipId() {
         return shipId;
     }
@@ -50,11 +43,11 @@ public class Ship implements Serializable{
         this.shipId = shipId;
     }
 
-    public int getShipType() {
+    public Shiptype getShipType() {
         return shipType;
     }
 
-    public void setShipType(int shipType) {
+    public void setShipType(Shiptype shipType) {
         this.shipType = shipType;
     }
 
@@ -121,4 +114,13 @@ public class Ship implements Serializable{
     public void setLoad(int load) {
         this.load = load;
     }
+
+    public int getCurrentAmmunitionType() {
+        return currentAmmunitionType;
+    }
+
+    public void setCurrentAmmunitionType(int currentAmmunitionType) {
+        this.currentAmmunitionType = currentAmmunitionType;
+    }
+
 }

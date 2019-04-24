@@ -16,16 +16,21 @@ public class MoveRepo implements IMove {
     List<Coordinate> coordinateList;
 
     @Override
-    public void movement(List<Ship> ships, List<Order> orders, Weather weather) {
+    public void movement(List<Ship> ships, List<Order> orders) {
 
         Coordinate coordinate = new Coordinate(5,5);
         Nationality nationality = new Nationality(1,"Danmark", "Red", "Captain Boosted");
-        Ship ship1 = new Ship(1, 1, nationality, coordinate, Direction.SW,
+        Shiptype shipType = new Shiptype();
+
+        Ship ship1 = new Ship(1, shipType, nationality, coordinate, Direction.SW,
                 0, 100, 100, 100, 0, 0);
         ships.add(ship1);
 
         Order order = new Order(1, 1, 1, 2, coordinateList, true, false, 1, coordinate);
 
+        String sql = "UPDATE ships SET sailors=?, hull=? WHERE id=?";
+
+        template.update(sql, ship1.getSailors(), ship1.getHull_health());
 
 
         }

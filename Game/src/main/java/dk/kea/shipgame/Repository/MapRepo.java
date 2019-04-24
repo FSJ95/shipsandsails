@@ -33,6 +33,8 @@ public class MapRepo {
 
         Nationality myNationality = new Nationality();
 
+        Shiptype shipType = new Shiptype();
+
         for(int i=0; i<len; i++) {
             if (nationalities.get(i).getId() == player_nationality) {
                 myNationality = nationalities.get(i);
@@ -57,7 +59,7 @@ public class MapRepo {
 
                 int y = 0;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, 1, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, shipType, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
@@ -76,7 +78,7 @@ public class MapRepo {
                 }
                 int y = map.getHeight()/2;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, 2, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, shipType, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
@@ -95,7 +97,7 @@ public class MapRepo {
                 }
                 int y = map.getHeight()-1;
                 Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, 3, myNationality, coordinate, dir,
+                Ship ship = new Ship(id, shipType, myNationality, coordinate, dir,
                         0, 100, 100, 100, 0, 0);
                 ships.add(ship);
 
