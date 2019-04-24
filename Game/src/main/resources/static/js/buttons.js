@@ -1,6 +1,5 @@
 const backgroundmusic = new Audio('music/trampsomali.mp3');
 
-
 function music_toggle() {
     if (backgroundmusic.paused) {
         document.getElementById("musicButton").innerHTML= "MUTE MUSIC";
