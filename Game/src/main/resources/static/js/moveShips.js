@@ -49,6 +49,9 @@ function changeStatsView(ship) {
     let captain = document.getElementById("statscaptain");
     captain.innerText = ship.nationality.captain;
 
+    let hull = document.getElementById("statshull");
+    hull.value = ship.hull_health;
+
 }
 
 function finalizeMove(tile) {

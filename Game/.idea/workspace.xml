@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52ff5a24-2f99-4918-9a0f-de67448dffc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb 2.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/soendergaard.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Shiptype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Design/ERD/ERD.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Design/ERD/ERD.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Nationality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Nationality.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Weather.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/CommunicationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/CommunicationRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/DbRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MoveRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MoveRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/CommunicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/CommunicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/ICommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/ICommunication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IWeather.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/DbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/music/potc.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/music/somali.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,16 +17,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/moveShips.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+            <state relative-caret-position="478">
+              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/buttons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -69,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/drawShips.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
+            <state relative-caret-position="1276">
               <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
             </state>
           </provider>
@@ -78,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="164" column="93" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
+            <state relative-caret-position="133">
+              <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -171,9 +149,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" />
       </list>
     </option>
   </component>
@@ -204,6 +183,11 @@
             <path>
               <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
               <item name="Game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
@@ -476,7 +460,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168758000" />
+    <option name="totallyTimeSpent" value="169034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -563,14 +547,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/tile50.png" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2566">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Weather.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -842,28 +818,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="164" column="93" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-13907" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/drawShips.js">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/moveShips.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+        <state relative-caret-position="165">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -871,6 +834,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/drawShips.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/moveShips.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
         </state>
       </provider>
     </entry>
