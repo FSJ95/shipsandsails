@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Order {
 
+    private int orderId;
     private int shipId;
     private int turnNumber; //which turn does the order belong to
     private int turn; //sharp left, left, straight, right, sharp right - Enum?
@@ -99,5 +100,13 @@ public class Order {
 
     public void setTarget(Coordinate target) {
         this.target = target;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 }
