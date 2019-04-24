@@ -124,80 +124,56 @@ h1 {
     background: url('../img/ships/ManatWar/Red.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 40px;
-    left: 40px;
+
 }
 
 .ManatWar-White {
     background: url('../img/ships/ManatWar/White.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 40px;
-    left: 90px;
+
 }
 
 .ManatWar-Teal {
     background: url('../img/ships/ManatWar/Teal.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 40px;
-    left: 200px;
+
 }
 
 .ManatWar-Green {
     background: url('../img/ships/ManatWar/Green.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 40px;
-    left: 150px;
+
 }
 
 .ShipoftheLine-Red {
     background: url('../img/ships/ShipoftheLine/Red.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 90px;
-    left: 40px;
+
 }
 
 .ShipoftheLine-White {
     background: url('../img/ships/ShipoftheLine/White.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 90px;
-    left: 90px;
+
 }
 
 .ShipoftheLine-Teal {
     background: url('../img/ships/ShipoftheLine/Teal.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 90px;
-    left: 200px;
+
 }
 
 .ShipoftheLine-Green {
     background: url('../img/ships/ShipoftheLine/Green.png') center no-repeat;
     position: absolute;
     background-size: auto 100%;
-    height: 40px;
-    width: 40px;
-    top: 90px;
-    left: 150px;
+
 }
 
 .Brig-Red {
