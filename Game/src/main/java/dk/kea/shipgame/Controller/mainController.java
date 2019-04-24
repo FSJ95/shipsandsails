@@ -3,7 +3,7 @@ package dk.kea.shipgame.Controller;
 import dk.kea.shipgame.Model.Map;
 import dk.kea.shipgame.Model.Ship;
 import dk.kea.shipgame.Service.CommunicationService;
-import dk.kea.shipgame.Service.MapService;
+import dk.kea.shipgame.Service.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +19,7 @@ import java.util.Objects;
 public class mainController {
 
     @Autowired
-    MapService mapService;
+    DbService mapService;
 
     @Autowired
     CommunicationService communicationService;
