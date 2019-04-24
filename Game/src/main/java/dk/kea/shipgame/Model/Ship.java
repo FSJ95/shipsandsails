@@ -2,6 +2,7 @@ package dk.kea.shipgame.Model;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Ship implements Serializable{
 
@@ -20,8 +21,9 @@ public class Ship implements Serializable{
     public Ship() {
     }
 
-    public Ship(int shipId, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
+    public Ship(int shipId, Shiptype shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
         this.shipId = shipId;
+        this.shipType = shipType;
         this.nationality = nationality;
         this.coordinate = coordinate;
         this.direction = direction;
@@ -33,20 +35,20 @@ public class Ship implements Serializable{
         this.currentAmmunitionType = currentAmmunitionType;
     }
 
-    public int getCurrentAmmunitionType() {
-        return currentAmmunitionType;
-    }
-
-    public void setCurrentAmmunitionType(int currentAmmunitionType) {
-        this.currentAmmunitionType = currentAmmunitionType;
-    }
-
     public int getShipId() {
         return shipId;
     }
 
     public void setShipId(int shipId) {
         this.shipId = shipId;
+    }
+
+    public Shiptype getShipType() {
+        return shipType;
+    }
+
+    public void setShipType(Shiptype shipType) {
+        this.shipType = shipType;
     }
 
     public Nationality getNationality() {
@@ -112,4 +114,13 @@ public class Ship implements Serializable{
     public void setLoad(int load) {
         this.load = load;
     }
+
+    public int getCurrentAmmunitionType() {
+        return currentAmmunitionType;
+    }
+
+    public void setCurrentAmmunitionType(int currentAmmunitionType) {
+        this.currentAmmunitionType = currentAmmunitionType;
+    }
+
 }
