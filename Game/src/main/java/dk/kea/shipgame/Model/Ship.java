@@ -2,59 +2,48 @@ package dk.kea.shipgame.Model;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Ship implements Serializable{
 
-    private int shipId;
-    private int shipType;
+    private int ship_id;
+    private Shiptype shipType; //0=Brig, 1=Ship of the line, 2=Man at war
     private Nationality nationality;
     private Coordinate coordinate;
     private Direction direction; //ENUM, N, NE, SE, S, SW, NW
     private int speed; //change: speed last round +/- calculated change
-    private int hull_health; //0 - 100%
-    private int sail_health; //0 - 100%
-    private int sailors; //0 - MAX_SAILORS
+    private int health;
     private int load; //load time
     private int currentAmmunitionType; //0=canonball, 1=chainball, 2=grapeshot
 
     public Ship() {
     }
 
-    public Ship(int shipId, int shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
-        this.shipId = shipId;
+    public Ship(int ship_id, Shiptype shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int health, int load, int currentAmmunitionType) {
+        this.ship_id = ship_id;
         this.shipType = shipType;
         this.nationality = nationality;
         this.coordinate = coordinate;
         this.direction = direction;
         this.speed = speed;
-        this.hull_health = hull_health;
-        this.sail_health = sail_health;
-        this.sailors = sailors;
+        this.health = health;
         this.load = load;
         this.currentAmmunitionType = currentAmmunitionType;
     }
 
-    public int getCurrentAmmunitionType() {
-        return currentAmmunitionType;
+    public int getShip_id() {
+        return ship_id;
     }
 
-    public void setCurrentAmmunitionType(int currentAmmunitionType) {
-        this.currentAmmunitionType = currentAmmunitionType;
+    public void setShip_id(int ship_id) {
+        this.ship_id = ship_id;
     }
 
-    public int getShipId() {
-        return shipId;
-    }
-
-    public void setShipId(int shipId) {
-        this.shipId = shipId;
-    }
-
-    public int getShipType() {
+    public Shiptype getShipType() {
         return shipType;
     }
 
-    public void setShipType(int shipType) {
+    public void setShipType(Shiptype shipType) {
         this.shipType = shipType;
     }
 
@@ -90,28 +79,12 @@ public class Ship implements Serializable{
         this.speed = speed;
     }
 
-    public int getHull_health() {
-        return hull_health;
+    public int getHealth() {
+        return health;
     }
 
-    public void setHull_health(int hull_health) {
-        this.hull_health = hull_health;
-    }
-
-    public int getSail_health() {
-        return sail_health;
-    }
-
-    public void setSail_health(int sail_health) {
-        this.sail_health = sail_health;
-    }
-
-    public int getSailors() {
-        return sailors;
-    }
-
-    public void setSailors(int sailors) {
-        this.sailors = sailors;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getLoad() {
@@ -120,5 +93,13 @@ public class Ship implements Serializable{
 
     public void setLoad(int load) {
         this.load = load;
+    }
+
+    public int getCurrentAmmunitionType() {
+        return currentAmmunitionType;
+    }
+
+    public void setCurrentAmmunitionType(int currentAmmunitionType) {
+        this.currentAmmunitionType = currentAmmunitionType;
     }
 }

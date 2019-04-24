@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52ff5a24-2f99-4918-9a0f-de67448dffc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb 2.mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/soendergaard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Shiptype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Design/ERD/ERD.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Design/ERD/ERD.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../Design/ERD/ERD.mwb.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Nationality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Nationality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Model/Weather.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/CommunicationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/CommunicationRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/DbRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MoveRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MoveRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/CommunicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/CommunicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/ICommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/ICommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/IWeather.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/DbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Service/MoveService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/music/potc.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/music/somali.mp3" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +39,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/moveShips.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+            <state relative-caret-position="386">
+              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/buttons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="59" selection-start-column="59" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -43,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/drawShips.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state relative-caret-position="1335">
+              <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -52,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="161" column="63" selection-start-line="161" selection-start-column="63" selection-end-line="161" selection-end-column="63" />
+            <state relative-caret-position="139">
+              <caret line="164" column="93" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -66,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="221" column="68" lean-forward="true" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="68" />
+              <caret line="221" column="68" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -144,10 +170,10 @@
         <option value="$PROJECT_DIR$/src/main/java/dk/kea/shipgame/Repository/MapRepo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/generateMap.js" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/moveShips.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/buttons.js" />
       </list>
     </option>
   </component>
@@ -273,6 +299,27 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="ships" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="ships" type="462c0819:PsiDirectoryNode" />
+              <item name="brig" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shipsandsails" type="b2602c69:ProjectViewProjectNode" />
@@ -429,13 +476,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168384000" />
+    <option name="totallyTimeSpent" value="168758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49625936" visible="true" weight="0.27382874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49625936" visible="true" weight="0.27382874" />
       <window_info id="Structure" order="1" sideWeight="0.50374067" side_tool="true" weight="0.26171243" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -446,7 +493,7 @@
       <window_info id="Learn" order="8" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.23972602" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.23972602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -781,28 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="161" column="63" selection-start-line="161" selection-start-column="63" selection-end-line="161" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="221" column="68" lean-forward="true" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="68" />
+          <caret line="221" column="68" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -813,17 +842,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="164" column="93" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/drawShips.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+        <state relative-caret-position="1335">
+          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/moveShips.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state relative-caret-position="386">
+          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
         </state>
       </provider>
     </entry>

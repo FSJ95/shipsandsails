@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Nationality implements Serializable {
 
-    private int id;
+    private int nationality_id;
     private String country;
     private String color;
     private String captain;
@@ -14,18 +14,18 @@ public class Nationality implements Serializable {
     }
 
     public Nationality(int id, String country, String color, String captain) {
-        this.id = id;
+        this.nationality_id = id;
         this.country = country;
         this.color = color;
         this.captain = captain;
     }
 
     public int getId() {
-        return id;
+        return nationality_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.nationality_id = id;
     }
 
     public String getCountry() {

@@ -2,10 +2,9 @@ package dk.kea.shipgame.Repository;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
+
 import dk.kea.shipgame.Model.Order;
 import dk.kea.shipgame.Model.Ship;
-import dk.kea.shipgame.Model.Weather;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
@@ -66,10 +65,7 @@ public class CommunicationRepo {
     return false;
     }
 
-    public void exchangeWeather(Weather weather) //exchange weather - if server then decide weather, if client receive weather
-    {
 
-    }
 
     public void exchangeOrders(List<Ship> ships, List<Order> orders) //exchange orders
     {
