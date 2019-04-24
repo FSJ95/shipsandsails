@@ -18,6 +18,8 @@ public class MoveRepo implements IMove {
     @Override
     public void movement(List<Ship> ships, List<Order> orders) {
 
+        /*
+
         Coordinate coordinate = new Coordinate(5,5);
         Nationality nationality = new Nationality(1,"Danmark", "Red", "Captain Boosted");
         Shiptype shipType = new Shiptype();
@@ -31,6 +33,8 @@ public class MoveRepo implements IMove {
         String sql = "UPDATE ships SET sailors=?, hull=? WHERE id=?";
 
         template.update(sql, ship1.getSailors(), ship1.getHull_health());
+
+        */
 
 
         }

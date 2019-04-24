@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class DbRepo {
+public class FetchRepo {
 
     @Autowired
     JdbcTemplate template;
@@ -35,27 +35,40 @@ public class DbRepo {
 
     public List<Ship> generateInitalShips(Map map, int player_nationality, boolean isClient){
 
+        // Our final list of ships we want to return
         List<Ship> ships = new ArrayList<>();
+
+        // Fetch all nationalities and ship-types
+        List<Shiptype> shiptypes = fetchAllShipTypes();
         List<Nationality> nationalities = fetchAllNationalities();
 
+        // Make len the length of the fetched nationalities list.
         int len = nationalities.size();
 
-        Nationality myNationality = new Nationality();
+        // Initalize the player nationality class.
+        Nationality nationality = new Nationality();
 
-        List<Shiptype> shiptypes = fetchAllShipTypes();
-
+        // Set the chosen player nationality
         for(int i=0; i<len; i++) {
             if (nationalities.get(i).getId() == player_nationality) {
-                myNationality = nationalities.get(i);
+                nationality = nationalities.get(i);
             }
         }
 
+        // Create 3 ships.
         for (int i = 0; i<3; i++) {
+
+            // Initialize some values for later use.
+            int x = 0;
+            int y = 0;
+            int id = 0;
+            Direction dir = null;
+            Ship ship = new Ship();
+            Coordinate coordinate = new Coordinate();
+
             if (i==0) {
 
-                int x;
-                Direction dir;
-                int id;
+                // Different values depending whether server or client.
                 if (isClient) {
                     x = map.getWidth()-1;
                     dir = Direction.SW;
@@ -66,16 +79,10 @@ public class DbRepo {
                     id = 1;
                 }
 
-                int y = 0;
-                Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, shiptypes.get(0), myNationality, coordinate, dir,
-                        0, 100, 100, 100, 0, 0);
-                ships.add(ship);
+                y = 0;
 
             } else if (i==1) {
-                int x;
-                Direction dir;
-                int id;
+
                 if (isClient) {
                     x = map.getWidth()-1;
                     dir = Direction.NW;
@@ -85,16 +92,11 @@ public class DbRepo {
                     dir = Direction.SE;
                     id = 2;
                 }
-                int y = map.getHeight()/2;
-                Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, shiptypes.get(1), myNationality, coordinate, dir,
-                        0, 100, 100, 100, 0, 0);
-                ships.add(ship);
+
+                y = map.getHeight()/2;
 
             } else if (i==2) {
-                int x;
-                Direction dir;
-                int id;
+
                 if (isClient) {
                     x = map.getWidth()-1;
                     dir = Direction.NW;
@@ -104,12 +106,14 @@ public class DbRepo {
                     dir = Direction.NE;
                     id = 3;
                 }
-                int y = map.getHeight()-1;
-                Coordinate coordinate = new Coordinate(x, y);
-                Ship ship = new Ship(id, shiptypes.get(2), myNationality, coordinate, dir, 0, 100, 100, 100, 0, 0);
-                ships.add(ship);
+                y = map.getHeight()-1;
 
             }
+
+            coordinate = new Coordinate(x, y);
+            ship = new Ship(id, shiptypes.get(i), nationality, coordinate, dir, 0, shiptypes.get(i).getMax_health(), 0, 0);
+            ships.add(ship);
+
         }
 
         return ships;
