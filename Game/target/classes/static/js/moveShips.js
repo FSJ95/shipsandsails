@@ -29,30 +29,42 @@ function changeStatsView(ship) {
     let shiptype = document.getElementById("statsshiptype");
     let shipcountry = document.getElementById("statscountry");
     let shipcaptain = document.getElementById("statscaptain");
-    let shiphull = document.getElementById("statshull");
+    let shiphealth = document.getElementById("statshealth");
+    let shipspeed = document.getElementById("statsspeed");
 
-    // Changing the ship type element.
-    shiptype.innerText = ship.nationality.type;
+    // Changing the ship type element stats.
+    shiptype.innerText = ship.shipType.type;
 
-    // Changing the ship image.
-    let imageString = "../img/ships/" + ship.shipType.type + "/" + ship.nationality.color + ".png";
+    // Changing the ship image stats.
+    let imageString = "../img/ships/" + ship.shipType.type.replace(/\s/g,'') + "/" + ship.nationality.color + ".png";
     shipimage.src = imageString;
 
-    // Changing the ship country.
+    // Changing the ship country stats.
     shipcountry.innerText = ship.nationality.country;
 
-    // Changing the ship captain.
+    // Changing the ship captain stats.
     shipcaptain.innerText = ship.nationality.captain;
 
-    // Changing the ship health.
+    // Changing the ship health stats.
+    let percentageOfMaxHealth = (((ship.health - ship.shipType.max_health)/ship.shipType.max_health)*100)+100;
+    shiphealth.style.width = percentageOfMaxHealth + "%";
+    shiphealth.innerText = ship.health + " / " + ship.shipType.max_health;
 
-    // Changing the
+    // Changing the ship speed stats.
+    let currentMaxSpeed = 0;
 
-    // Changing the
+    if (percentageOfMaxHealth > 75) {
+        currentMaxSpeed = ship.shipType.max_speed;
+    } else if (percentageOfMaxHealth < 75 && percentageOfMaxHealth > 50) {
+        currentMaxSpeed = ship.shipType.speed_75;
+    } else if (percentageOfMaxHealth < 50 && percentageOfMaxHealth > 25) {
+        currentMaxSpeed = ship.shipType.speed_50;
+    } else if (percentageOfMaxHealth < 25) {
+        currentMaxSpeed = ship.shipType.speed_25;
+    }
 
+    let percentageOfMaxSpeed = ((((ship.speed - currentMaxSpeed)/currentMaxSpeed)*100)+100);
 
-
-
-    shiphull.value = ship.hull_health;
-
+    shipspeed.innerText = ship.speed + " / " + currentMaxSpeed;
+    shipspeed.style.width = percentageOfMaxSpeed + "%";
 }
