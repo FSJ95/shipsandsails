@@ -6,7 +6,6 @@ import java.io.Serializable;
 public class Ship implements Serializable{
 
     private int shipId;
-    private int shipType;
     private Nationality nationality;
     private Coordinate coordinate;
     private Direction direction; //ENUM, N, NE, SE, S, SW, NW
@@ -20,9 +19,8 @@ public class Ship implements Serializable{
     public Ship() {
     }
 
-    public Ship(int shipId, int shipType, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
+    public Ship(int shipId, Nationality nationality, Coordinate coordinate, Direction direction, int speed, int hull_health, int sail_health, int sailors, int load, int currentAmmunitionType) {
         this.shipId = shipId;
-        this.shipType = shipType;
         this.nationality = nationality;
         this.coordinate = coordinate;
         this.direction = direction;
@@ -48,14 +46,6 @@ public class Ship implements Serializable{
 
     public void setShipId(int shipId) {
         this.shipId = shipId;
-    }
-
-    public int getShipType() {
-        return shipType;
-    }
-
-    public void setShipType(int shipType) {
-        this.shipType = shipType;
     }
 
     public Nationality getNationality() {
