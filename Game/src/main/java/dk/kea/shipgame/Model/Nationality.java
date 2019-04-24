@@ -13,8 +13,8 @@ public class Nationality implements Serializable {
 
     }
 
-    public Nationality(int id, String country, String color, String captain) {
-        this.nationality_id = id;
+    public Nationality(int nationality_id, String country, String color, String captain) {
+        this.nationality_id = nationality_id;
         this.country = country;
         this.color = color;
         this.captain = captain;
@@ -24,8 +24,8 @@ public class Nationality implements Serializable {
         return nationality_id;
     }
 
-    public void setId(int id) {
-        this.nationality_id = id;
+    public void setId(int nationality_id) {
+        this.nationality_id = nationality_id;
     }
 
     public String getCountry() {

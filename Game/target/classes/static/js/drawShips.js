@@ -8,26 +8,36 @@ class Coordinate {
 }
 
 class Nationality{
-    constructor(id, country, color, captain) {
-        this.id = id;
+    constructor(nationality_id, country, color, captain) {
+        this.nationality_id = nationality_id;
         this.country = country;
         this.color = color;
         this.captain = captain;
     }
 }
-
+class Shiptype{
+    constructor(ship_type_id, type, max_speed, max_speed_change, speed_75, speed_50, speed_25, max_health, damage) {
+        this.ship_type_id = ship_type_id;
+        this.type = type;
+        this.max_speed = max_speed;
+        this.max_speed_change = max_speed_change;
+        this.speed_75 = speed_75;
+        this.speed_50 = speed_50;
+        this.speed_25 = speed_25;
+        this.max_health = max_health;
+        this.damage = damage;
+    }
+}
 class Ship {
-    constructor(el, shipId, shipType, nationality, coordinate, direction, speed, hull_health, sail_health, sailors, load, currentAmmunitionType) {
+    constructor(el, ship_id, shipType, nationality, coordinate, direction, speed, health, load, currentAmmunitionType) {
         this.el = el;
-        this.shipId = shipId;
+        this.ship_id = ship_id;
         this.shipType = shipType;
         this.nationality = nationality;
         this.coordinate = coordinate;
         this.direction = direction;
         this.speed = speed;
-        this.hull_health = hull_health;
-        this.sail_health = sail_health;
-        this.sailors = sailors;
+        this.health = health;
         this.load = load;
         this.currentAmmunitionType = currentAmmunitionType;
     }
@@ -43,13 +53,6 @@ var Direction = {
     NW : 5
 };
 
-// Used to turn our shiptype numbers into corresponding ships.
-var ShipType = {
-    1 : "brig",
-    2 : "shipoftheline",
-    3 : "manatwar"
-};
-
 // Freeze our enums so they cant be changed.
 Object.freeze(Direction);
 Object.freeze(ShipType);
@@ -62,17 +65,21 @@ function drawShips(ShipList) {
         // Create a new div for each ship element.
         let div = document.createElement('div');
 
-        // Fill our javascript constructor with the values recieved from our controller.
+        // Fill our javascript constructors with the values recieved from our controller.
         let coordinate = new Coordinate(ShipList[i].coordinate.x, ShipList[i].coordinate.y);
-        let nationality = new Nationality(ShipList[i].nationality.id, ShipList[i].nationality.country,
+
+        let shipType = new Shiptype(ShipList[i].shipType.ship_type_id, ShipList[i].shipType.type,
+            ShipList[i].shipType.max_speed, ShipList[i].shipType.max_speed_change, ShipList[i].shipType.speed_75,
+            ShipList[i].shipType.speed_50,ShipList[i].shipType.speed_25,ShipList[i].shipType.max_health,ShipList[i].shipType.damage);
+
+        let nationality = new Nationality(ShipList[i].nationality.nationality_id, ShipList[i].nationality.country,
             ShipList[i].nationality.color, ShipList[i].nationality.captain);
 
-        let ship = new Ship(div, ShipList[i].shipId, ShipList[i].shipType,
-            nationality, coordinate, Direction[ShipList[i].direction], ShipList[i].speed,
-            ShipList[i].hull_health, ShipList[i].sail_health, ShipList[i].sailors,
-            ShipList[i].load, ShipList[i].currentAmmunitionType);
+        let ship = new Ship(div, ShipList[i].ship_id, shipType, nationality, coordinate,
+            Direction[ShipList[i].direction], ShipList[i].speed,
+            ShipList[i].health, ShipList[i].load, ShipList[i].currentAmmunitionType);
 
-        div.classList.add(ShipType[ship.shipType] + "-" + ship.nationality.color);
+        div.classList.add(ship.shipType.type.replace(/\s/g,'') + "-" + ship.nationality.color);
 
         for (var j = 0; j < tiles.length; j++) {
             if (ship.coordinate.x === tiles[j].x && ship.coordinate.y === tiles[j].y) {
