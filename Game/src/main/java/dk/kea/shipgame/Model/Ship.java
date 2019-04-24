@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class Ship implements Serializable{
 
     private int shipId;
+    private Shiptype shipType; //0=Brig, 1=Ship of the line, 2=Man at war
     private Nationality nationality;
     private Coordinate coordinate;
     private Direction direction; //ENUM, N, NE, SE, S, SW, NW
