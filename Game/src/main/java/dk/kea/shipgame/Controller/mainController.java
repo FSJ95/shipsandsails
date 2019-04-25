@@ -94,7 +94,6 @@ public class mainController {
 
         System.out.println(wr.getParameter("ship_id"));
 
-
         return ("redirect:/" + currentPage);
 
     }

@@ -1,5 +1,6 @@
 let chosenShip = null;
 
+<<<<<<< HEAD
 function endturn() {
     $.ajax({
         url : "/endturn",
@@ -16,6 +17,8 @@ function endturn() {
         // hideLoading()
     });}
 
+=======
+>>>>>>> cca54271373d338c517fb8863338894f416a8a40
 
 function initalizeMove(ship) {
     chosenShip = ship;
