@@ -1,6 +1,8 @@
 package dk.kea.shipgame.Controller;
 
 import dk.kea.shipgame.Model.Map;
+import dk.kea.shipgame.Model.Nationality;
+import dk.kea.shipgame.Model.Order;
 import dk.kea.shipgame.Model.Ship;
 import dk.kea.shipgame.Service.CommunicationService;
 import dk.kea.shipgame.Service.FetchService;
@@ -26,7 +28,8 @@ public class mainController {
 
     List<Ship> shipList = new ArrayList<>();
     Map map;
-    String currentPage = "";
+    String currentPage;
+    int playerNationality;
 
     @GetMapping("/")
     public String index(Model model){
@@ -44,7 +47,7 @@ public class mainController {
         int mapWidth = Integer.parseInt(Objects.requireNonNull(wr.getParameter("width")));
         map = new Map(mapHeight,mapWidth);
 
-        int playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
+        playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
 
         shipList = mapService.generateInitalShips(map, playerNationality, false);
 
@@ -68,7 +71,7 @@ public class mainController {
     public String createClient(WebRequest wr, Model model){
 
         String ipAdress = wr.getParameter("ipadress");
-        int playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
+        playerNationality = Integer.parseInt(Objects.requireNonNull(wr.getParameter("player_nationality")));
 
         if (communicationService.initComm(ipAdress)) {
 
@@ -90,11 +93,30 @@ public class mainController {
     }
 
     @PostMapping("/endturn")
-    public String endturn(WebRequest wr, Model model){
+    public String endturn(@RequestBody List<Order> orderList, Model model){
 
-        System.out.println(wr.getParameter("ship_id"));
+        for (Order order : orderList) {
+            System.out.println(order.toString());
+        }
 
-        return ("redirect:/" + currentPage);
+        // SMID DET HER LORT I MOVE;
+        for (Ship ship : shipList) {
+            for (Order order : orderList) {
+                if (ship.getShip_id() == order.getShip_id()) {
+
+                    ship.setCoordinate(order.getCoordinateList().get(0));
+                }
+
+            }
+
+        }
+
+
+
+
+
+
+        return "redirect:/" + currentPage;
 
     }
 

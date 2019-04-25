@@ -1,13 +1,5 @@
 let tiles = [];
 
-class Tile {
-    constructor(el, x, y) {
-        this.el = el;
-        this.x = x; // Coordinates.
-        this.y = y; // Coordinates.
-    }
-}
-
 function generateMap(height, width) {
 
     // Where to place the titles

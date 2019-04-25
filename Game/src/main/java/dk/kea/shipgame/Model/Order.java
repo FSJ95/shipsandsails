@@ -1,11 +1,12 @@
 package dk.kea.shipgame.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.List;
 
 public class Order implements Serializable
 {
-
     private int order_id;
     private int ship_id;
     private int turnNumber; //which turn does the order belong to
