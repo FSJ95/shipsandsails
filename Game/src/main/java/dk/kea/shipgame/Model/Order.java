@@ -1,8 +1,9 @@
 package dk.kea.shipgame.Model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Order
+public class Order implements Serializable
 {
 
     private int order_id;
@@ -100,5 +101,20 @@ public class Order
 
     public void setTarget(Coordinate target) {
         this.target = target;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "order_id=" + order_id +
+                ", ship_id=" + ship_id +
+                ", turnNumber=" + turnNumber +
+                ", turn=" + turn +
+                ", coordinateList=" + coordinateList +
+                ", fire=" + fire +
+                ", load=" + load +
+                ", ammunitionType=" + ammunitionType +
+                ", target=" + target +
+                '}';
     }
 }

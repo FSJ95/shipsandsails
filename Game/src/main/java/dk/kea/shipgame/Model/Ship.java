@@ -102,4 +102,19 @@ public class Ship implements Serializable{
     public void setCurrentAmmunitionType(int currentAmmunitionType) {
         this.currentAmmunitionType = currentAmmunitionType;
     }
+
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "ship_id=" + ship_id +
+                ", shipType=" + shipType +
+                ", nationality=" + nationality +
+                ", coordinate=" + coordinate +
+                ", direction=" + direction +
+                ", speed=" + speed +
+                ", health=" + health +
+                ", load=" + load +
+                ", currentAmmunitionType=" + currentAmmunitionType +
+                '}';
+    }
 }

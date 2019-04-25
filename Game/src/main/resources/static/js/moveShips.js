@@ -1,9 +1,10 @@
 let chosenShip = null;
 
+
 function initalizeMove(ship) {
     chosenShip = ship;
     console.log(chosenShip);
-    changeStatsView(ship)
+    changeStatsView(ship);
 
 }
 

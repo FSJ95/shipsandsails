@@ -55,14 +55,14 @@ var Direction = {
 
 // Freeze our enums so they cant be changed.
 Object.freeze(Direction);
-Object.freeze(ShipType);
 
 function drawShips(ShipList) {
     // Where to place the titles
     let map = document.getElementById('ships');
 
     for (var i = 0; i < ShipList.length; i++) {
-        // Create a new div for each ship element.
+
+    // Create a new div for each ship element.
         let div = document.createElement('div');
 
         // Fill our javascript constructors with the values recieved from our controller.
