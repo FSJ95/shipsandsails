@@ -1,42 +1,10 @@
 let chosenShip = null;
 
 
-
-
 function initalizeMove(ship) {
     chosenShip = ship;
     console.log(chosenShip);
     changeStatsView(ship);
-    var url = "/bareentest";
-    var method = "POST";
-    var postData = order;
-
-// You REALLY want shouldBeAsync = true.
-// Otherwise, it'll block ALL execution waiting for server response.
-    var shouldBeAsync = true;
-
-    var request = new XMLHttpRequest();
-
-
-    request.onload = function () {
-
-        // Because of javascript's fabulous closure concept, the XMLHttpRequest "request"
-        // object declared above is available in this function even though this function
-        // executes long after the request is sent and long after this function is
-        // instantiated. This fact is CRUCIAL to the workings of XHR in ordinary
-        // applications.
-
-        // You can get all kinds of information about the HTTP response.
-        var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
-        var data = request.responseText; // Returned data, e.g., an HTML document.
-    }
-
-    request.open(method, url, shouldBeAsync);
-
-    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-// Or... request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-// Or... whatever
-    request.send(postData);
 
 }
 

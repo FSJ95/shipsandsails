@@ -1,5 +1,4 @@
 let ships = [];
-let order;
 
 class Coordinate {
     constructor(x,y) {
@@ -62,9 +61,6 @@ function drawShips(ShipList) {
     let map = document.getElementById('ships');
 
     for (var i = 0; i < ShipList.length; i++) {
-
-        var order = new Order();
-        order.turnNumber = 1;
 
     // Create a new div for each ship element.
         let div = document.createElement('div');

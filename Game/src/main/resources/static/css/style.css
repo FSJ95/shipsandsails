@@ -209,3 +209,7 @@ h1 {
 p {
     margin: 0px;
 }
+
+.progress-bar{
+    color:black;
+}
