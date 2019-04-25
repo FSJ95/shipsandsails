@@ -1,5 +1,21 @@
 let chosenShip = null;
 
+function endturn() {
+    $.ajax({
+        url : "/endturn",
+        type : 'POST',
+        dataType : 'json',
+        data : JSON.stringify(sadasdas),
+        contentType : 'application/json',
+        mimeType : 'application/json'
+    }).done(function(data) {
+        // temGrid.addJSONData(data);
+    }).fail(function(error) {
+        // parseToPageAlerts(error.responseText);
+    }).always(function() {
+        // hideLoading()
+    });}
+
 
 function initalizeMove(ship) {
     chosenShip = ship;

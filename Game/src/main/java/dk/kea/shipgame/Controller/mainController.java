@@ -26,6 +26,7 @@ public class mainController {
 
     List<Ship> shipList = new ArrayList<>();
     Map map;
+    String currentPage = "";
 
     @GetMapping("/")
     public String index(Model model){
@@ -54,6 +55,8 @@ public class mainController {
             communicationService.sendMsg((Object) shipList);
 
             shipList.addAll((List<Ship>) communicationService.recieveMsg());
+
+            currentPage = "server";
             return "redirect:/server";
         } else {
             return "redirect:/";
@@ -76,11 +79,23 @@ public class mainController {
             communicationService.sendMsg((Object) shipList);
 
             shipList.addAll((List<Ship>) communicationService.recieveMsg());
+
+            currentPage = "client";
             return "redirect:/client";
 
         } else {
             return "redirect:/";
         }
+
+    }
+
+    @PostMapping("/endturn")
+    public String endturn(WebRequest wr, Model model){
+
+        System.out.println(wr.getParameter("ship_id"));
+
+
+        return ("redirect:/" + currentPage);
 
     }
 

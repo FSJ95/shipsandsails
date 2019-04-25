@@ -57,6 +57,7 @@ var Direction = {
 Object.freeze(Direction);
 
 function drawShips(ShipList) {
+
     // Where to place the titles
     let map = document.getElementById('ships');
 
