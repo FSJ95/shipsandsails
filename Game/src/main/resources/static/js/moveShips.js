@@ -1,42 +1,28 @@
 let chosenShip = null;
-
-function endturn() {
-    $.ajax({
-        url : "/endturn",
-        type : 'POST',
-        dataType : 'json',
-        data : JSON.stringify(sadasdas),
-        contentType : 'application/json',
-        mimeType : 'application/json'
-    }).done(function(data) {
-        // temGrid.addJSONData(data);
-    }).fail(function(error) {
-        // parseToPageAlerts(error.responseText);
-    }).always(function() {
-        // hideLoading()
-    });}
-
+let orderList = [];
 
 function initalizeMove(ship) {
     chosenShip = ship;
-    console.log(chosenShip);
     changeStatsView(ship);
-
 }
 
 function finalizeMove(tile) {
-    console.log(tile);
     if (chosenShip!=null) {
-        console.log("inde");
 
-        console.log(tile.el.style.top);
-        console.log(tile.el.style.left);
+        let coordinateList = [];
+        coordinateList.push(new Coordinate(tile.x, tile.y));
+
+        let target = new Coordinate(5,5);
+
+        orderList.push(new Order(chosenShip.ship_id, chosenShip.direction, coordinateList, false, true,
+            chosenShip.currentAmmunitionType, target));
+
         chosenShip.el.style.top = tile.el.style.top;
         chosenShip.el.style.left = tile.el.style.left;
 
         chosenShip = null;
-    }
 
+    }
 }
 
 function changeStatsView(ship) {

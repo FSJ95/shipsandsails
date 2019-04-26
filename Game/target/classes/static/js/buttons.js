@@ -9,3 +9,22 @@ function music_toggle() {
         backgroundmusic.pause();
     }
 }
+
+function endturn() {
+    $.ajax({
+        url : "/endturn",
+        type : 'POST',
+        dataType : 'json',
+        data : JSON.stringify(orderList),
+        contentType : 'application/json',
+        mimeType : 'application/json'
+    }).done(function(data) {
+
+    }).fail(function(error) {
+        // parseToPageAlerts(error.responseText);
+    }).always(function() {
+        // hideLoading()
+    });
+
+    location.reload();
+}
