@@ -4,7 +4,7 @@ Ships and Sails Game
 Project report: [Google Docs](https://docs.google.com/document/d/1jFa_vIZ3ZhDhDGs7WHSXubrLJ1X63S9TVVATxLatTEk/edit)
 
 ## What is in the folders..?
-### Exercise
+#### Exercise
 The exercise information and rules for the game.
 
 ### Game
